@@ -2,4 +2,4 @@
 # should be "johngraham @ Johns-MacBook-Pro <cwd> % "
 PROMPT='%F{red}%n%f @ %F{green}%m%f: %F{blue}%1~%f %# '
 
-alias ls="lsd"
+alias ls="lsd --icon-theme unicode"
