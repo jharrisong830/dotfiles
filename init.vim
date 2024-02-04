@@ -25,33 +25,40 @@ set mouse=a
 set clipboard=unnamedplus
 filetype plugin on
 set ttyfast
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-t> :NERDTreeToggle<CR> " ctrl-t -> toggle nerdtree
 
 " airline_theme config
 "
 let g:airline_theme='bubblegum'
 
+" get rid of annoying trailing whitespace warning lol
+let g:airline#extensions#whitespace#enabled = 0
+
+
 " NERDTree config
 "
 " Start NERDTree. If a file is specified, move the cursor to its window.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-let g:NERDTreeGitStatusWithFlags = 1
+" no cursor underline
+let g:NERDTreeHighlightCursorline = 0
+
+" close after opening a file
+let g:NERDTreeQuitOnOpen = 1
+
+" hide help text
+let g:NERDTreeMinimalUI = 1
+
+" let g:NERDTreeGitStatusWithFlags = 1
+
+" show hidden files, except .DS_Store and .git/
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeIgnore = ['\.DS_Store$', '\.git$']
+
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:NERDTreeWinSize=30
-let g:NERDTreeGitStatusNodeColorization = 1
-let g:NERDTreeColorMapCustom = {
-    \ "Staged"    : "#0ee375",
-    \ "Modified"  : "#d9bf91",
-    \ "Renamed"   : "#51C9FC",
-    \ "Untracked" : "#FCE77C",
-    \ "Unmerged"  : "#FC51E6",
-    \ "Dirty"     : "#FFBD61",
-    \ "Clean"     : "#87939A",
-    \ "Ignored"   : "#808080"
-    \ }
+let g:NERDTreeWinSize=25
 
