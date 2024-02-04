@@ -4,6 +4,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
 set nocompatible
@@ -61,4 +62,9 @@ let g:NERDTreeIgnore = ['\.DS_Store$', '\.git$']
 
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:NERDTreeWinSize=25
+
+
+" language server protocol config
+" 
+lua require('lsp_config')
 
