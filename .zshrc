@@ -2,7 +2,7 @@
 # should be "johngraham @ Johns-MacBook-Pro <cwd> % "
 PROMPT='%F{red}%n%f @ %F{green}%m%f: %F{blue}%1~%f %# '
 
-alias ls="lsd --icon never"
+alias ls="lsd --icon-theme fancy"
 
 # opam configuration
 [[ ! -r /Users/johngraham/.opam/opam-init/init.zsh ]] || source /Users/johngraham/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
