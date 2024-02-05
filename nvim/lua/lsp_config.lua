@@ -1,5 +1,4 @@
 local lspconfig = require('lspconfig')
-lspconfig.ocamllsp.setup{}
 lspconfig.lua_ls.setup{}
 lspconfig.lua_ls.setup {    -- for recognizing nvim and other plugins  
   on_init = function(client)
