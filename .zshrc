@@ -11,5 +11,7 @@ alias ls="lsd --icon-theme fancy"
 export PATH="$(brew --prefix)/opt/python@3.11/libexec/bin:$PATH"
 
 # node config for homebrew
-export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+export PATH="$(brew --prefix)/opt/node@20/bin:$PATH"
 
+# use homebrew git instead of macOS git
+export PATH="$(brew --prefix)/opt/git/bin:$PATH"
