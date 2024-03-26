@@ -21,13 +21,13 @@ else
 fi
 
 
-if ! command -v lsd &> /dev/null # check if lsd exists before setting alias
+if command -v lsd &> /dev/null # check if lsd exists before setting alias
 then
     alias ls="lsd --icon-theme fancy"
 fi
 
 
-if ! command -v caffeinate &> /dev/null # check if caffeinate exists before setting alias
+if command -v caffeinate &> /dev/null # check if caffeinate exists before setting alias
 then
     alias caff="caffeinate -d" # program hangs and prevents the display from sleeping
 fi
