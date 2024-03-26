@@ -2,8 +2,6 @@
 # should be "johngraham @ Johns-MacBook-Pro <cwd> % "
 PROMPT='%F{red}%n%f @ %F{green}%m%f: %F{blue}%1~%f %# '
 
-alias ls="lsd --icon-theme fancy"
-
 # opam configuration
 [[ ! -r /Users/johngraham/.opam/opam-init/init.zsh ]] || source /Users/johngraham/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
@@ -20,5 +18,17 @@ else
 
     # use homebrew git instead of macOS git
     export PATH="$(brew --prefix)/opt/git/bin:$PATH"
+fi
+
+
+if ! command -v lsd &> /dev/null # check if lsd exists before setting alias
+then
+    alias ls="lsd --icon-theme fancy"
+fi
+
+
+if ! command -v caffeinate &> /dev/null # check if caffeinate exists before setting alias
+then
+    alias caff="caffeinate -d" # program hangs and prevents the display from sleeping
 fi
 
