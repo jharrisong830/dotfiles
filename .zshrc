@@ -6,10 +6,8 @@ PROMPT='%F{red}%n%f @ %F{green}%m%f: %F{blue}%1~%f %# '
 [[ ! -r /Users/johngraham/.opam/opam-init/init.zsh ]] || source /Users/johngraham/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 
-if ! command -v brew &> /dev/null # check if brew exists before setting path
+if command -v brew &> /dev/null # check if brew exists before setting path
 then
-    # do nothing
-else
     # python config for homebrew
     export PATH="$(brew --prefix)/opt/python@3.11/libexec/bin:$PATH"
 
