@@ -5,7 +5,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'neovim/nvim-lspconfig'
-Plug '/Users/johngraham/Developer/nvim-bulk-comment' " test
 call plug#end()
 
 set nocompatible
