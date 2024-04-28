@@ -16,6 +16,9 @@ then
 
     # use homebrew git instead of macOS git
     export PATH="$(brew --prefix)/opt/git/bin:$PATH"
+
+    # alias for 'brew services'
+    alias bs="brew services"
 fi
 
 
