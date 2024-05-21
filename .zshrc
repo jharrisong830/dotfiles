@@ -18,7 +18,7 @@ then
     export PATH="$(brew --prefix)/opt/git/bin:$PATH"
 
     # alias for 'brew services'
-    # alias bs="brew services"
+    alias bs="brew services"
 fi
 
 
