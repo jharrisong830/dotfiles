@@ -14,6 +14,6 @@ if (Test-Path -Path "C:\Users\johng\.jdks\jdk-21.0.3+9") { # adding specific jdk
 if (Test-Path -Path "C:\Users\johng\AppData\Local\Android\Sdk") { # android studio for react native
     $env:ANDROID_HOME = "C:\Users\johng\AppData\Local\Android\Sdk" # create ANDROID_HOME env variable
     if (Test-Path -Path "C:\Users\johng\AppData\Local\Android\Sdk\platform-tools") { # add platform tools to path
-        $env:PATH += "C:\Users\johng\AppData\Local\Android\Sdk\platform-tools"
+        $env:PATH += ";C:\Users\johng\AppData\Local\Android\Sdk\platform-tools"
     }
 }
