@@ -8,6 +8,7 @@ SET arr[2]=.prettierrc
 SET arr[3]=.prettierignore
 SET arr[4]=Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 SET arr[5]=AppData\Local\nvim\
+SET arr[6]=AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\settings.json
 
 
 @REM git -C "C:\Users\%USERNAME%\Developer\dotfiles" remote update > NUL
@@ -23,7 +24,7 @@ SET arr[5]=AppData\Local\nvim\
 
 :: symbolic links for user directory files
 
-FOR /l %%i IN (0, 1, 5) DO (
+FOR /l %%i IN (0, 1, 6) DO (
     :: !arr[%%i]! = current dotfile relative path from user directory (C:\Users\%USERNAME%)
     FOR %%C IN (%~dp0!arr[%%i]!) DO (
         :: %%C = current dotfile full path (including file name)
