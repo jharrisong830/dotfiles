@@ -2,13 +2,29 @@
 
 SETLOCAL EnableDelayedExpansion
 
+:: arr[EVEN] -> location relative to this directory (dotfiles repo)
+:: arr[ODD]  -> location relative to the user's home directory (C:\Users\%USERNAME%)
+
 SET arr[0]=.gitconfig
-SET arr[1]=.npmrc
-SET arr[2]=.prettierrc
-SET arr[3]=.prettierignore
-SET arr[4]=Documents\PowerShell\Microsoft.PowerShell_profile.ps1
-SET arr[5]=AppData\Local\nvim\
-SET arr[6]=AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\settings.json
+SET arr[1]=.gitconfig
+
+SET arr[2]=.npmrc
+SET arr[3]=.npmrc
+
+SET arr[4]=.prettierrc
+SET arr[5]=.prettierrc
+
+SET arr[6]=.prettierignore
+SET arr[7]=.prettierignore
+
+SET arr[8]=windows\powershell\Microsoft.PowerShell_profile.ps1
+SET arr[9]=Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+
+SET arr[10]=nvim\
+SET arr[11]=AppData\Local\nvim\
+
+SET arr[12]=windows\winget\settings.json
+SET arr[13]=AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\settings.json
 
 
 @REM git -C "C:\Users\%USERNAME%\Developer\dotfiles" remote update > NUL
@@ -24,35 +40,29 @@ SET arr[6]=AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\Lo
 
 :: symbolic links for user directory files
 
-FOR /l %%i IN (0, 1, 6) DO (
-    :: !arr[%%i]! = current dotfile relative path from user directory (C:\Users\%USERNAME%)
-    FOR %%C IN (%~dp0!arr[%%i]!) DO (
-        :: %%C = current dotfile full path (including file name)
-        ECHO %%C
-
-        IF !arr[%%i]:~-1! == "\" (
-            :: directory symlink
-            FOR %%B IN (%%~nC) DO (
-                :: %%B = current directory basename
-                IF EXIST C:\Users\%USERNAME%\!arr[%%i]! (
+FOR /l %%i IN (0, 2, 12) DO (
+    SET /A j=%%i+1
+    FOR %%j IN (!j!) DO (
+        FOR %%C IN (%~dp0!arr[%%i]!) DO (
+            :: %%C = current dotfile full path (including file name) within the dotfiles repo
+            IF "!arr[%%i]:~-1!" == "\" (
+                :: directory symlink
+                IF EXIST C:\Users\%USERNAME%\!arr[%%j]! (
                     :: delete file if it already exists (overwrite)
-                    del C:\Users\%USERNAME%\!arr[%%i]!
+                    rmdir C:\Users\%USERNAME%\!arr[%%j]!
                 )
-                mklink /d C:\Users\%USERNAME%\!arr[%%i]! %~dp0%%B
-            )
-        ) ELSE (
-            :: regular file
-            FOR %%B IN (%%~nxC) DO (
-                :: %%B = current dotfile basename
-                IF EXIST C:\Users\%USERNAME%\!arr[%%i]! (
+                mklink /d C:\Users\%USERNAME%\!arr[%%j]! %%C
+            ) ELSE (
+                :: regular file
+                IF EXIST C:\Users\%USERNAME%\!arr[%%j]! (
                     :: delete file if it already exists (overwrite)
-                    del C:\Users\%USERNAME%\!arr[%%i]!
+                    del C:\Users\%USERNAME%\!arr[%%j]!
                 )
-                mklink C:\Users\%USERNAME%\!arr[%%i]! %~dp0%%B
+                mklink C:\Users\%USERNAME%\!arr[%%j]! %%C
             )
         )
     )
 )
 
 
-ECHO done!
+ECHO "All symbolic links created. Done!"
