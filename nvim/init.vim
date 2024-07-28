@@ -5,6 +5,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'neovim/nvim-lspconfig'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 call plug#end()
 
 set nocompatible
@@ -30,7 +31,7 @@ nnoremap <C-t> :NERDTreeToggle<CR> " ctrl-t -> toggle nerdtree
 
 " airline_theme config
 "
-let g:airline_theme='bubblegum'
+let g:airline_theme='catppuccin_mocha'
 
 " get rid of annoying trailing whitespace warning lol
 let g:airline#extensions#whitespace#enabled = 0
