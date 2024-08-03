@@ -19,6 +19,10 @@ then
 
     # alias for 'brew services'
     alias bs="brew services"
+
+    # use homebrew ruby instead of macOS ruby
+    export PATH="$(brew --prefix)/opt/ruby/bin:$PATH"
+    export PATH="$(brew --prefix)/lib/ruby/gems/3.3.0/bin:$PATH" # gems binaries
 fi
 
 
