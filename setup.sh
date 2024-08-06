@@ -1,14 +1,20 @@
 #!/usr/bin/env zsh
 
+HOMEDIR="Users"
+
+if [[ $(uname) != "Darwin" ]]; then
+    HOMEDIR = "home"
+fi
+
 typeset -A DOTFILES=(
     # [dotfiles repo loc]=loc on system
-    [$(pwd)/.gitconfig]=/Users/$(whoami)/.gitconfig
-    [$(pwd)/.npmrc]=/Users/$(whoami)/.npmrc
-    [$(pwd)/.prettierrc]=/Users/$(whoami)/.prettierrc
-    [$(pwd)/.prettierignore]=/Users/$(whoami)/.prettierignore
-    [$(pwd)/.zshrc]=/Users/$(whoami)/.zshrc
-    [$(pwd)/.zprofile]=/Users/$(whoami)/.zprofile
-    [$(pwd)/nvim]=/Users/$(whoami)/.config/nvim
+    [$(pwd)/.gitconfig]=/$HOMEDIR/$(whoami)/.gitconfig
+    [$(pwd)/.npmrc]=/$HOMEDIR/$(whoami)/.npmrc
+    [$(pwd)/.prettierrc]=/$HOMEDIR/$(whoami)/.prettierrc
+    [$(pwd)/.prettierignore]=/$HOMEDIR/$(whoami)/.prettierignore
+    [$(pwd)/.zshrc]=/$HOMEDIR/$(whoami)/.zshrc
+    [$(pwd)/.zprofile]=/$HOMEDIR/$(whoami)/.zprofile
+    [$(pwd)/nvim]=/$HOMEDIR/$(whoami)/.config/nvim
 )
 
 # create symbolic links for config files
