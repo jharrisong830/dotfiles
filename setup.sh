@@ -3,7 +3,7 @@
 HOMEDIR="Users"
 
 if [[ $(uname) != "Darwin" ]]; then
-    HOMEDIR = "home"
+    HOMEDIR="home"
 fi
 
 typeset -A DOTFILES=(
