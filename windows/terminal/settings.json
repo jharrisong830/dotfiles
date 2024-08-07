@@ -16,10 +16,6 @@
             "keys": "ctrl+v"
         },
         {
-            "command": "find",
-            "keys": "ctrl+shift+f"
-        },
-        {
             "command": 
             {
                 "action": "splitPane",
@@ -27,6 +23,10 @@
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+d"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
         }
     ],
     "copyFormatting": "none",
@@ -64,7 +64,6 @@
             {
                 "colorScheme": "Catppuccin Mocha",
                 "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
-                "icon": "ms-appx:///ProfileIcons/pwsh.png",
                 "font": 
                 {
                     "face": "MonaspiceKr Nerd Font",
@@ -72,15 +71,16 @@
                 },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/pwsh.png",
                 "name": "PowerShell",
                 "opacity": 65,
+                "source": "Windows.Terminal.PowershellCore",
                 "useAcrylic": true
             },
             {
                 "colorScheme": "Catppuccin Mocha",
                 "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
                 "elevate": true,
-                "icon": "ms-appx:///ProfileIcons/pwsh.png",
                 "font": 
                 {
                     "face": "MonaspiceKr Nerd Font",
@@ -88,42 +88,31 @@
                 },
                 "guid": "{e7e0a9eb-5616-4304-869b-eea6b2746c18}",
                 "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/pwsh.png",
                 "name": "PowerShell Admin",
                 "opacity": 65,
-                "useAcrylic": true,
-                "startingDirectory": "%USERPROFILE%"
+                "startingDirectory": "%USERPROFILE%",
+                "useAcrylic": true
+            },
+            {
+                "colorScheme": "Catppuccin Mocha",
+                "commandline": "C:\\Windows\\system32\\wsl.exe -d Ubuntu",
+                "font": 
+                {
+                    "face": "MonaspiceKr Nerd Font",
+                    "size": 13.0
+                },
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": false,
+                "name": "WSL (Ubuntu)",
+                "opacity": 65,
+                "source": "Windows.Terminal.Wsl",
+                "useAcrylic": true
             }
         ]
     },
     "schemes": 
     [
-        {
-            "name": "Catppuccin Mocha",
-          
-            "cursorColor": "#F5E0DC",
-            "selectionBackground": "#585B70",
-          
-            "background": "#1E1E2E",
-            "foreground": "#CDD6F4",
-          
-            "black": "#45475A",
-            "red": "#F38BA8",
-            "green": "#A6E3A1",
-            "yellow": "#F9E2AF",
-            "blue": "#89B4FA",
-            "purple": "#F5C2E7",
-            "cyan": "#94E2D5",
-            "white": "#BAC2DE",
-          
-            "brightBlack": "#585B70",
-            "brightRed": "#F38BA8",
-            "brightGreen": "#A6E3A1",
-            "brightYellow": "#F9E2AF",
-            "brightBlue": "#89B4FA",
-            "brightPurple": "#F5C2E7",
-            "brightCyan": "#94E2D5",
-            "brightWhite": "#A6ADC8"
-        },
         {
             "background": "#0C0C0C",
             "black": "#0C0C0C",
@@ -169,6 +158,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#CCCCCC",
             "yellow": "#C19C00"
+        },
+        {
+            "background": "#1E1E2E",
+            "black": "#45475A",
+            "blue": "#89B4FA",
+            "brightBlack": "#585B70",
+            "brightBlue": "#89B4FA",
+            "brightCyan": "#94E2D5",
+            "brightGreen": "#A6E3A1",
+            "brightPurple": "#F5C2E7",
+            "brightRed": "#F38BA8",
+            "brightWhite": "#A6ADC8",
+            "brightYellow": "#F9E2AF",
+            "cursorColor": "#F5E0DC",
+            "cyan": "#94E2D5",
+            "foreground": "#CDD6F4",
+            "green": "#A6E3A1",
+            "name": "Catppuccin Mocha",
+            "purple": "#F5C2E7",
+            "red": "#F38BA8",
+            "selectionBackground": "#585B70",
+            "white": "#BAC2DE",
+            "yellow": "#F9E2AF"
         },
         {
             "background": "#282C34",
@@ -307,6 +319,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#D3D7CF",
             "yellow": "#C4A000"
+        },
+        {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
         },
         {
             "background": "#000000",
