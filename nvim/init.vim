@@ -47,8 +47,8 @@ autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | e
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 " Exit Vim if the empty buffer is the only window remaining in the only tab
-" after exiting another buffer
-autocmd BufLeave * if tabpagenr('$') == 1 && winnr('$') == 2 && getbufline('%', 1, '$') == [''] | quit | endif
+" after exiting another buffer (does not work lol)
+" autocmd BufLeave * if tabpagenr('$') == 1 && winnr('$') == 2 && getbufline('%', 1, '$') == [''] | quit | endif
 
 " no cursor underline
 let g:NERDTreeHighlightCursorline = 0
