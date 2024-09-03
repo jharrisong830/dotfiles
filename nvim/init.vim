@@ -5,7 +5,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'neovim/nvim-lspconfig'
-Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' } 
 call plug#end()
 
@@ -30,9 +30,7 @@ filetype plugin on
 set ttyfast
 nnoremap <C-t> :NERDTreeToggle<CR> " ctrl-t -> toggle nerdtree
 
-" airline_theme config
-"
-let g:airline_theme='catppuccin_mocha'
+
 
 " get rid of annoying trailing whitespace warning lol
 let g:airline#extensions#whitespace#enabled = 0
@@ -70,4 +68,10 @@ let g:NERDTreeWinSize=25
 " 
 lua require('lsp_config')
 lua require('treesitter')
+
+
+" catppuccin theme config
+"
+lua require('catppuccin_theme')
+let g:airline_theme='catppuccin'
 
