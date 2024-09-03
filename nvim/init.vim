@@ -29,7 +29,7 @@ set mouse=a
 set clipboard=unnamedplus
 filetype plugin on
 set ttyfast
-nnoremap <C-t> :NERDTreeToggle<CR> " ctrl-t -> toggle nerdtree
+nnoremap <C-t> :NERDTreeFocus<CR> " ctrl-t -> go to nerdtree
 
 
 
@@ -39,9 +39,8 @@ let g:airline#extensions#whitespace#enabled = 0
 
 " NERDTree config
 "
-" Start NERDTree. If a file is specified, move the cursor to its window.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+" Start NERDTree and move the cursor to the original window.
+autocmd VimEnter * NERDTree | wincmd p
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
