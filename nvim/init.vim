@@ -6,6 +6,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'neovim/nvim-lspconfig'
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
 
 set nocompatible
@@ -68,4 +69,5 @@ let g:NERDTreeWinSize=25
 " language server protocol config
 " 
 lua require('lsp_config')
+lua require('treesitter')
 
