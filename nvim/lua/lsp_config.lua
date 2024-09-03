@@ -1,4 +1,6 @@
 local lspconfig = require('lspconfig')
+
+
 lspconfig.lua_ls.setup {    -- for recognizing nvim and other plugins  
   on_init = function(client)
     local path = client.workspace_folders[1].name
@@ -32,4 +34,5 @@ lspconfig.lua_ls.setup {    -- for recognizing nvim and other plugins
 
 lspconfig.gleam.setup{}
 lspconfig.pyright.setup{}
+lspconfig.tsserver.setup{}
 

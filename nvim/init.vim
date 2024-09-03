@@ -21,6 +21,7 @@ set expandtab
 set shiftwidth=4
 set autoindent
 set number
+set relativenumber " relative number in addition to line number
 set wildmode=longest,list
 filetype plugin indent on
 syntax on
@@ -39,17 +40,21 @@ let g:airline#extensions#whitespace#enabled = 0
 " NERDTree config
 "
 " Start NERDTree. If a file is specified, move the cursor to its window.
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" Exit Vim if the empty buffer is the only window remaining in the only tab
+" after exiting another buffer
+autocmd BufLeave * if tabpagenr('$') == 1 && winnr('$') == 2 && getbufline('%', 1, '$') == [''] | quit | endif
 
 " no cursor underline
 let g:NERDTreeHighlightCursorline = 0
 
 " close after opening a file
-let g:NERDTreeQuitOnOpen = 1
+" let g:NERDTreeQuitOnOpen = 1
 
 " hide help text
 let g:NERDTreeMinimalUI = 1
