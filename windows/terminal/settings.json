@@ -68,6 +68,7 @@
             {
                 "colorScheme": "Catppuccin Mocha",
                 "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
+                "experimental.retroTerminalEffect": false,
                 "font": 
                 {
                     "face": "MonaspiceKr Nerd Font",
@@ -77,9 +78,7 @@
                 "hidden": false,
                 "icon": "ms-appx:///ProfileIcons/pwsh.png",
                 "name": "PowerShell",
-                "opacity": 65,
-                "source": "Windows.Terminal.PowershellCore",
-                "useAcrylic": true
+                "source": "Windows.Terminal.PowershellCore"
             },
             {
                 "colorScheme": "Catppuccin Mocha",
@@ -94,9 +93,7 @@
                 "hidden": false,
                 "icon": "ms-appx:///ProfileIcons/pwsh.png",
                 "name": "PowerShell Admin",
-                "opacity": 65,
-                "startingDirectory": "%USERPROFILE%",
-                "useAcrylic": true
+                "startingDirectory": "%USERPROFILE%"
             }
         ]
     },
