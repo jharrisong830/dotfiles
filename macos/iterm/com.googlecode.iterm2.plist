@@ -4,6 +4,8 @@
 <dict>
 	<key>AddUtilitiesToPATH</key>
 	<false/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>BadgeFontIsBold</key>
 	<true/>
 	<key>CopySelection</key>
@@ -3950,6 +3952,8 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SoundForEsc</key>
