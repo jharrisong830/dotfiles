@@ -20,12 +20,9 @@ then
     # use homebrew git instead of macOS git
     export PATH="$(brew --prefix)/opt/git/bin:$PATH"
 
-    # alias for 'brew services'
-    alias bs="brew services"
-    # if brew tap | grep -qs homebrew/services
-    # then 
-    #     alias bs="brew services"
-    # fi
+    # alias for 'brew services <start | stop> mongodb-community'
+    alias mongo-start="brew services start mongodb-community"
+    alias mongo-stop="brew services stop mongodb-community"
 
     # use homebrew ruby instead of macOS ruby
     export PATH="$(brew --prefix)/opt/ruby/bin:$PATH"
