@@ -5,9 +5,9 @@ PROMPT='%F{red}%n%f @ %F{green}%m%f: %F{blue}%1~%f %# '
 # opam configuration
 # [[ ! -r /Users/johngraham/.opam/opam-init/init.zsh ]] || source /Users/johngraham/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
-function _killRedisJob() {
-    kill -TERM $(jobs | sed -En 's/^\[([0-9]+)\].*redis-stack-server &> \/dev\/null$/%\1/p')
-}
+# function _killRedisJob() {
+#     kill -TERM $(jobs | sed -En 's/^\[([0-9]+)\].*redis-stack-server &> \/dev\/null$/%\1/p')
+# }
 
 if command -v brew &> /dev/null # check if brew exists before setting path
 then
@@ -42,8 +42,9 @@ then
 fi
 
 
-if command -v redis-stack-server &> /dev/null
-then
-    alias redis-start="redis-stack-server &> /dev/null &" # start redis server in the background
-    alias redis-stop="_killRedisJob" # get the job number of redis, terminate that job
-fi
+# if command -v redis-stack-server &> /dev/null
+# then
+#     alias redis-start="redis-stack-server &> /dev/null &" # start redis server in the background
+#     alias redis-stop="_killRedisJob" # get the job number of redis, terminate that job
+# fi
+
