@@ -32,7 +32,7 @@ lspconfig.lua_ls.setup {    -- for recognizing nvim and other plugins
   end
 }
 
-lspconfig.gleam.setup{}
 lspconfig.pyright.setup{}
 lspconfig.tsserver.setup{}
+lspconfig.elixirls.setup{ cmd = '/opt/homebrew/bin/elixirls' }
 
