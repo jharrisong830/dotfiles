@@ -1,6 +1,14 @@
 # changing the prompt 
 # should be "johngraham @ Johns-MacBook-Pro <cwd> % "
-PROMPT='%F{red}%n%f @ %F{green}%m%f: %F{blue}%1~%f %# '
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' formats $'%F{magenta}\Uf418 %b%f '
+
+setopt prompt_subst
+
+PROMPT='%F{red}%n%f @ %F{green}%m%f: %F{blue}%1~%f ${vcs_info_msg_0_}%# '
 
 # opam configuration
 # [[ ! -r /Users/johngraham/.opam/opam-init/init.zsh ]] || source /Users/johngraham/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
