@@ -27,7 +27,12 @@ if [[ $(uname) == "Darwin" ]]; then
 
     # homebrew casks
     typeset -a CASKS_MACOS=(
-
+        discord
+        firefox
+        font-monaspace
+        font-monaspace-nerd-font
+        iterm2
+        utm
     )
 
 
@@ -43,6 +48,17 @@ if [[ $(uname) == "Darwin" ]]; then
         else echo "Already installed -> $package"
         fi
     done
+
+    echo "--- INSTALLING CASKS... ---"
+    INSTALLED=$(brew list --cask -1)
+    for package in ${CASKS_MACOS[@]}; do
+        if [[ ${INSTALLED} != *"${package}"* ]]; then # install package if not already installed
+            echo "Installing $package"
+            brew install --cask $package
+        else echo "Already installed -> $package"
+        fi
+    done
+e
 else 
     echo BOOOOOOOOLINUX
 fi
