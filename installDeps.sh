@@ -3,7 +3,7 @@ if [[ $(uname) == "Darwin" ]]; then
 
     if ! command -v brew &> /dev/null; then # install homebrew if not already installed
         echo "--- brew NOT FOUND. INSTALLING... ---"
-        # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     fi
     
 
