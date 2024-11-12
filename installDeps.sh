@@ -58,7 +58,6 @@ if [[ $(uname) == "Darwin" ]]; then
         else echo "Already installed -> $package"
         fi
     done
-e
 else 
     echo BOOOOOOOOLINUX
 fi
