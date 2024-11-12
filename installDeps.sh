@@ -17,7 +17,8 @@ if [[ $(uname) == "Darwin" ]]; then
         'erlang' 
         'gh' 
         'git' 
-        'lsd' 
+        'lsd'
+        'node'
     )
 
     # homebrew taps
