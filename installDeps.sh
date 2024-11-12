@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 if [[ $(uname) == "Darwin" ]]; then
     # setup for macOS, homebrew packages and casks
 

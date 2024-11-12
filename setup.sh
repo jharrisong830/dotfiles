@@ -28,3 +28,7 @@ for key value in ${(kv)DOTFILES}; do
     ln -s $key $value # create symlink
 done;
 
+if [[ ! -f /$HOMEDIR/$(whoami)/.hushlogin ]]; then
+    touch /$HOMEDIR/$(whoami)/.hushlogin
+fi
+
