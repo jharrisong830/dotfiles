@@ -18,17 +18,22 @@ typeset -A DOTFILES=(
 )
 
 # create symbolic links for config files
-
+echo "~~~ LINKING FILES... ~~~"
 for key value in ${(kv)DOTFILES}; do
     if [[ -f $value ]]; then # if symlink already exists...
-	echo removed!!
-	rm $value # remove!
+	    echo "Unlinking $value"
+	    rm $value # remove!
     fi
-    echo linking!
+    echo "Creating link for:"
+    echo $key
+    echo "@"
+    echo $value
     ln -s $key $value # create symlink
+    echo
 done;
 
 if [[ ! -f /$HOMEDIR/$(whoami)/.hushlogin ]]; then
+    echo "Creating ~/.hushlogin"
     touch /$HOMEDIR/$(whoami)/.hushlogin
 fi
 
