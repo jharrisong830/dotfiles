@@ -96,10 +96,31 @@
                 "startingDirectory": "%USERPROFILE%"
             },
             {
+                "colorScheme": "Catppuccin Mocha",
+                "font": 
+                {
+                    "face": "MonaspiceKr Nerd Font",
+                    "size": 13
+                },
                 "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
                 "hidden": false,
                 "name": "Git Bash",
                 "source": "Git"
+            },
+            {
+                "colorScheme": "Catppuccin Mocha",
+                "commandline": "C:\\msys64\\msys2_shell.cmd -defterm -no-start -ucrt64 -shell zsh",
+                "experimental.retroTerminalEffect": false,
+                "font": 
+                {
+                    "face": "MonaspiceKr Nerd Font",
+                    "size": 13
+                },
+                "guid": "{f4144e9a-f083-4f67-b2a3-9476ea63f4ac}",
+                "hidden": false,
+                "icon": "C:\\msys64\\ucrt64.ico",
+                "name": "msys2",
+                "startingDirectory": "%USERPROFILE%"
             }
         ]
     },

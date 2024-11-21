@@ -3,7 +3,24 @@ require('nvim-treesitter.install').prefer_git = true -- install parsers using gi
 local treeconfig = require('nvim-treesitter.configs')
 
 treeconfig.setup {
-    ensure_installed = { 'c', 'cpp', 'lua', 'vim', 'bash', 'erlang', 'html', 'java', 'javascript', 'json', 'ocaml', 'powershell', 'python', 'swift', 'typescript', 'elixir' },
+    ensure_installed = { 
+        -- 'c', 
+        -- 'cpp', 
+        'lua', 
+        'vim', 
+        'bash', 
+        'erlang', 
+        'html', 
+        'java', 
+        'javascript', 
+        'json', 
+        'ocaml', 
+        'powershell', 
+        'python', 
+        -- 'swift', 
+        'typescript', 
+        -- 'elixir' 
+    },
 
     sync_install = false,
     auto_install = false,

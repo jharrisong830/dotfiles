@@ -22,3 +22,7 @@ if (Test-Path -Path "C:\Program Files\PostgreSQL\16") { # add psql commands to p
     $env:PATH += ";C:\Program Files\PostgreSQL\16\bin"
 }
 
+if (Test-Path -Path "C:\msys64\ucrt64\bin") { # add msys2 tools to path
+    $env:PATH += ";C:\msys64\ucrt64\bin"
+}
+
