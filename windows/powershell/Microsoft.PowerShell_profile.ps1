@@ -3,8 +3,16 @@ Clear-Host # get rid of the version message
 
 $ESC = [char]27 # usage for color: $ESC[<colorcode>m
 
+function getGitBranchString {
+    $currBranch = git branch --show-current
+    if (! $currBranch) { return "" }
+    else {
+        return "$ESC[35m$([char]0xf418) $currBranch$ESC[0m "
+    }
+}
+
 function prompt {
-    "$ESC[31m$env:USERNAME$ESC[0m @ $ESC[32m$env:COMPUTERNAME$ESC[0m: $ESC[34m$(Split-Path -Path $pwd -Leaf)$ESC[0m > "
+    return "$ESC[31m$env:USERNAME$ESC[0m @ $ESC[32m$env:COMPUTERNAME$ESC[0m: $ESC[34m$(Split-Path -Path $pwd -Leaf)$ESC[0m $(getGitBranchString)> "
 }
 
 if (Test-Path -Path "C:\Users\$env:USERNAME\.jdks\jdk-17.0.11+9") { # adding specific jdk to path (for java, javac, etc.)
