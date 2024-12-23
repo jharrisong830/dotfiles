@@ -67,7 +67,7 @@
             },
             {
                 "colorScheme": "Catppuccin Mocha",
-                "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
+                "commandline": "pwsh",
                 "experimental.retroTerminalEffect": false,
                 "font": 
                 {
@@ -82,7 +82,7 @@
             },
             {
                 "colorScheme": "Catppuccin Mocha",
-                "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
+                "commandline": "pwsh",
                 "elevate": true,
                 "font": 
                 {
