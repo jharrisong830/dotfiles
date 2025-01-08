@@ -11,7 +11,7 @@ setopt prompt_subst
 PROMPT='%F{red}%n%f @ %F{green}%m%f: %F{blue}%1~%f ${vcs_info_msg_0_}%# '
 
 # opam configuration
-# [[ ! -r /Users/johngraham/.opam/opam-init/init.zsh ]] || source /Users/johngraham/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+[[ ! -r /Users/johngraham/.opam/opam-init/init.zsh ]] || source /Users/johngraham/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 # function _killRedisJob() {
 #     kill -TERM $(jobs | sed -En 's/^\[([0-9]+)\].*redis-stack-server &> \/dev\/null$/%\1/p')
