@@ -14,7 +14,7 @@ if [[ $(uname) == "Darwin" ]]; then
         'neovim' 
         'python@3.11' 
         'tree' 
-        'erlang' 
+        'opam' 
         'gh' 
         'git' 
         'lsd'
