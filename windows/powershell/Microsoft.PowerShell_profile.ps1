@@ -4,11 +4,13 @@ Clear-Host # get rid of the version message
 $ESC = [char]27 # usage for color: $ESC[<colorcode>m
 
 function getGitBranchString {
-    $currBranch = git branch --show-current
-    if (! $currBranch) { return "" }
-    else {
-        return "$ESC[35m$([char]0xf418) $currBranch$ESC[0m "
-    }
+    if (Get-Command "git" -ErrorAction Ignore) {
+        $currBranch = git branch --show-current
+        if (! $currBranch) { return "" }
+        else {
+            return "$ESC[35m$([char]0xf418) $currBranch$ESC[0m "
+        }
+    } else { return "" }
 }
 
 function prompt {

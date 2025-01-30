@@ -48,26 +48,7 @@
         "list": 
         [
             {
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "hidden": false,
-                "name": "Windows PowerShell"
-            },
-            {
-                "commandline": "%SystemRoot%\\System32\\cmd.exe",
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "hidden": false,
-                "name": "Command Prompt"
-            },
-            {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
-                "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
-            },
-            {
                 "colorScheme": "Catppuccin Mocha",
-                "commandline": "pwsh",
                 "experimental.retroTerminalEffect": false,
                 "font": 
                 {
@@ -81,46 +62,16 @@
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "colorScheme": "Catppuccin Mocha",
-                "commandline": "pwsh",
-                "elevate": true,
-                "font": 
-                {
-                    "face": "MonaspiceKr Nerd Font",
-                    "size": 13
-                },
-                "guid": "{e7e0a9eb-5616-4304-869b-eea6b2746c18}",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
-                "icon": "ms-appx:///ProfileIcons/pwsh.png",
-                "name": "PowerShell Admin",
-                "startingDirectory": "%USERPROFILE%"
+                "name": "Windows PowerShell"
             },
             {
-                "colorScheme": "Catppuccin Mocha",
-                "font": 
-                {
-                    "face": "MonaspiceKr Nerd Font",
-                    "size": 13
-                },
-                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
-                "name": "Git Bash",
-                "source": "Git"
-            },
-            {
-                "colorScheme": "Catppuccin Mocha",
-                "commandline": "C:\\msys64\\msys2_shell.cmd -defterm -no-start -ucrt64 -shell zsh",
-                "experimental.retroTerminalEffect": false,
-                "font": 
-                {
-                    "face": "MonaspiceKr Nerd Font",
-                    "size": 13
-                },
-                "guid": "{f4144e9a-f083-4f67-b2a3-9476ea63f4ac}",
-                "hidden": false,
-                "icon": "C:\\msys64\\ucrt64.ico",
-                "name": "msys2",
-                "startingDirectory": "%USERPROFILE%"
+                "name": "Command Prompt"
             }
         ]
     },
