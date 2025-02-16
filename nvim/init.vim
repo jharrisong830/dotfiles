@@ -40,7 +40,7 @@ let g:airline#extensions#whitespace#enabled = 0
 " NERDTree config
 "
 " Start NERDTree and move the cursor to the original window.
-autocmd VimEnter * NERDTree | wincmd p
+" autocmd VimEnter * NERDTree | wincmd p
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
