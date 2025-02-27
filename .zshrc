@@ -28,9 +28,12 @@ then
     # use homebrew git instead of macOS git
     export PATH="$(brew --prefix)/opt/git/bin:$PATH"
 
-    # alias for 'brew services <start | stop> mongodb-community'
+    # alias for 'brew services <start | stop> <service>'
     alias mongo-start="brew services start mongodb-community"
     alias mongo-stop="brew services stop mongodb-community"
+    
+    alias ollama-start="brew services start ollama"
+    alias ollama-stop="brew services stop ollama"
 
     # use homebrew ruby instead of macOS ruby
     export PATH="$(brew --prefix)/opt/ruby/bin:$PATH"
