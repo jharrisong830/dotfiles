@@ -23,7 +23,7 @@ then
     export PATH="$(brew --prefix)/opt/python@3.11/libexec/bin:$PATH"
 
     # node config for homebrew
-    export PATH="$(brew --prefix)/opt/node@20/bin:$PATH" # use LTS first
+    # export PATH="$(brew --prefix)/opt/node@20/bin:$PATH" # use LTS first
 
     # use homebrew git instead of macOS git
     export PATH="$(brew --prefix)/opt/git/bin:$PATH"
@@ -36,8 +36,8 @@ then
     alias ollama-stop="brew services stop ollama"
 
     # use homebrew ruby instead of macOS ruby
-    export PATH="$(brew --prefix)/opt/ruby/bin:$PATH"
-    export PATH="$(brew --prefix)/lib/ruby/gems/3.3.0/bin:$PATH" # gems binaries
+    # export PATH="$(brew --prefix)/opt/ruby/bin:$PATH"
+    # export PATH="$(brew --prefix)/lib/ruby/gems/3.3.0/bin:$PATH" # gems binaries
 fi
 
 
