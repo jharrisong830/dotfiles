@@ -17,6 +17,7 @@ typeset -A DOTFILES=(
     [$(pwd)/.zshenv]=/$HOMEDIR/$(whoami)/.zshenv
     [$(pwd)/.profile]=/$HOMEDIR/$(whoami)/.profile
     [$(pwd)/nvim]=/$HOMEDIR/$(whoami)/.config/nvim
+    [$(pwd)/.bunfig.toml]=/$HOMEDIR/$(whoami)/.bunfig.toml
 )
 
 # create symbolic links for config files

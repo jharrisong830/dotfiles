@@ -29,20 +29,13 @@ SET arr[13]=AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\L
 SET arr[14]=windows\terminal\settings.json
 SET arr[15]=AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
 
-@REM git -C "C:\Users\%USERNAME%\Developer\dotfiles" remote update > NUL
-
-@REM SET gitRemoteStatus=git -C "C:\Users\%USERNAME%\Developer\dotfiles" status -uno
-
-@REM IF ($gitRemoteStatus -match 'Your branch is behind') {
-@REM     echo "New config changes detected, updating!"
-@REM     git -C "C:\Users\%USERNAME%\Developer\dotfiles" pull > $null
-@REM     echo "You might want to restart your session."
-@REM }
+SET arr[16]=.bunfig.toml
+SET arr[17]=.bunfig.toml
 
 
 :: symbolic links for user directory files
 
-FOR /l %%i IN (0, 2, 14) DO (
+FOR /l %%i IN (0, 2, 16) DO (
     SET /A j=%%i+1
     FOR %%j IN (!j!) DO (
         FOR %%C IN (%~dp0!arr[%%i]!) DO (
