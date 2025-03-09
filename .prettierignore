@@ -3,4 +3,5 @@
 *.handlebars
 *.html
 package-lock.json
+bun.lock
 
