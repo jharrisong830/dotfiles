@@ -3,6 +3,9 @@
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
+autoload -Uz compinit && compinit
+
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case-insensitive completion
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' formats $'%F{magenta}\Uf418 %b%f '
 
