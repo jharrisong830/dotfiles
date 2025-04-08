@@ -3956,6 +3956,8 @@
 	<true/>
 	<key>PromptOnQuit</key>
 	<false/>
+	<key>QuitWhenAllWindowsClosed</key>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>TabStyleWithAutomaticOption</key>
