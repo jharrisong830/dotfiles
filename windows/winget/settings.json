@@ -8,5 +8,8 @@
     },
     "telemetry": {
         "disable": true
+    },
+    "uninstallBehavior": {
+        "purgePortablePackage": true
     }
 }
