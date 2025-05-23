@@ -21,6 +21,11 @@ if (Test-Path -Path "C:\Users\$env:USERNAME\.jdks\jdk-21.0.3+9") { # adding spec
     $env:PATH += ";C:\Users\$env:USERNAME\.jdks\jdk-21.0.3+9\bin"
 }
 
+if (Test-Path -Path "C:\Users\$env:USERNAME\Apps\Notepad++") { # add notepad++ to path
+    $env:PATH += ";C:\Users\$env:USERNAME\Apps\Notepad++"
+}
+
+
 # if (Test-Path -Path "C:\Users\$env:USERNAME\AppData\Local\Android\Sdk") { # android studio for react native
 #     $env:ANDROID_HOME = "C:\Users\$env:USERNAME\AppData\Local\Android\Sdk" # create ANDROID_HOME env variable
 #     if (Test-Path -Path "C:\Users\$env:USERNAME\AppData\Local\Android\Sdk\platform-tools") { # add platform tools to path
