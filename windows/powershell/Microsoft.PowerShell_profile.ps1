@@ -20,3 +20,7 @@ function prompt {
 if (Test-Path -Path "C:\Users\$env:USERNAME\Apps\Notepad++") { # add notepad++ to path
     $env:PATH += ";C:\Users\$env:USERNAME\Apps\Notepad++"
 }
+
+if (Test-Path -Path "C:\Users\johng\scoop\apps\openjdk\current\bin") { # add openjdk to front of path (incase java8 occurs first)
+    $env:PATH = "C:\Users\johng\scoop\apps\openjdk\current\bin;" + $env:PATH
+}
