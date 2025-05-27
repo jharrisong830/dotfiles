@@ -23,7 +23,7 @@ PROMPT='%F{red}%n%f @ %F{green}%m%f: %F{blue}%1~%f ${vcs_info_msg_0_}%# '
 if command -v brew &> /dev/null # check if brew exists before setting path
 then
     # python config for homebrew
-    export PATH="$(brew --prefix)/opt/python@3.11/libexec/bin:$PATH"
+    export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
 
     # node config for homebrew
     # export PATH="$(brew --prefix)/opt/node@20/bin:$PATH" # use LTS first
