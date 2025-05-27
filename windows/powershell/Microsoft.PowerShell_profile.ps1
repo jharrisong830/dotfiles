@@ -17,27 +17,6 @@ function prompt {
     return "$ESC[31m$env:USERNAME$ESC[0m @ $ESC[32m$env:COMPUTERNAME$ESC[0m: $ESC[34m$(Split-Path -Path $pwd -Leaf)$ESC[0m $(getGitBranchString)> "
 }
 
-if (Test-Path -Path "C:\Users\$env:USERNAME\.jdks\jdk-21.0.3+9") { # adding specific jdk to path (for java, javac, etc.)
-    $env:PATH += ";C:\Users\$env:USERNAME\.jdks\jdk-21.0.3+9\bin"
-}
-
 if (Test-Path -Path "C:\Users\$env:USERNAME\Apps\Notepad++") { # add notepad++ to path
     $env:PATH += ";C:\Users\$env:USERNAME\Apps\Notepad++"
 }
-
-
-# if (Test-Path -Path "C:\Users\$env:USERNAME\AppData\Local\Android\Sdk") { # android studio for react native
-#     $env:ANDROID_HOME = "C:\Users\$env:USERNAME\AppData\Local\Android\Sdk" # create ANDROID_HOME env variable
-#     if (Test-Path -Path "C:\Users\$env:USERNAME\AppData\Local\Android\Sdk\platform-tools") { # add platform tools to path
-#         $env:PATH += ";C:\Users\$env:USERNAME\AppData\Local\Android\Sdk\platform-tools"
-#     }
-# }
-
-# if (Test-Path -Path "C:\Program Files\PostgreSQL\16") { # add psql commands to path
-#     $env:PATH += ";C:\Program Files\PostgreSQL\16\bin"
-# }
-
-# if (Test-Path -Path "C:\msys64\ucrt64\bin") { # add msys2 tools to path
-#     $env:PATH += ";C:\msys64\ucrt64\bin"
-# }
-
