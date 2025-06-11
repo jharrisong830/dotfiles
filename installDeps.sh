@@ -12,20 +12,10 @@ if [[ $(uname) == "Darwin" ]]; then
     # homebrew formulae
     typeset -a FORMULAE_MACOS=(
         'neovim' 
-        'python@3.11' 
-        'tree' 
-        'opam' 
+        'python' 
         'gh' 
         'git' 
         'lsd'
-        'node'
-    )
-
-    # homebrew taps
-    typeset -a TAPS_MACOS=(
-        homebrew/services 
-        mongodb/brew 
-        redis-stack/redis-stack 
     )
 
     # homebrew casks
@@ -35,7 +25,6 @@ if [[ $(uname) == "Darwin" ]]; then
         font-monaspace
         font-monaspace-nerd-font
         iterm2
-        utm
     )
 
 
