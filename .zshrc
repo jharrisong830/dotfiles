@@ -38,6 +38,8 @@ then
     alias ollama-start="brew services start ollama"
     alias ollama-stop="brew services stop ollama"
 
+    alias brew-fresh="brew update && brew upgrade && brew autoremove && brew cleanup"
+
     # use homebrew ruby instead of macOS ruby
     # export PATH="$(brew --prefix)/opt/ruby/bin:$PATH"
     # export PATH="$(brew --prefix)/lib/ruby/gems/3.3.0/bin:$PATH" # gems binaries
