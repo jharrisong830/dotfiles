@@ -54,6 +54,9 @@ then
     alias gcam="git commit -am"
     alias ga="git add"
     alias gb="git branch"
+    alias gp="git push"
+    alias gsw="git switch"
+    alias gch="git checkout"
 fi
 
 # setting common aliases
