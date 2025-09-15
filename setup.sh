@@ -18,6 +18,7 @@ typeset -A DOTFILES=(
     [$(pwd)/.profile]=/$HOMEDIR/$(whoami)/.profile
     [$(pwd)/nvim]=/$HOMEDIR/$(whoami)/.config/nvim
     [$(pwd)/.bunfig.toml]=/$HOMEDIR/$(whoami)/.bunfig.toml
+    [$(pwd)/alacritty]=/$HOMEDIR/$(whoami)/.config/alacritty
 )
 
 # create symbolic links for config files
