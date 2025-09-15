@@ -25,7 +25,7 @@ then
     # alias for 'brew services <start | stop> <service>'
     alias mongo-start="brew services start mongodb-community"
     alias mongo-stop="brew services stop mongodb-community"
-    
+
     alias ollama-start="brew services start ollama"
     alias ollama-stop="brew services stop ollama"
 
