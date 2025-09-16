@@ -8,14 +8,6 @@ if [[ $(uname) != "Darwin" ]] ; then
     HOMEDIR="home"
 fi
 
-typeset -A DOTFILES=(
-    # [dotfiles repo loc]=loc on system
-    [$(pwd)/.npmrc]=/$HOMEDIR/$(whoami)/.npmrc
-    [$(pwd)/.prettierrc]=/$HOMEDIR/$(whoami)/.prettierrc
-    [$(pwd)/.prettierignore]=/$HOMEDIR/$(whoami)/.prettierignore
-    [$(pwd)/.bunfig.toml]=/$HOMEDIR/$(whoami)/.bunfig.toml
-)
-
 function _unlink_target() {
     target=$1
 
