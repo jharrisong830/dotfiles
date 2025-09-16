@@ -6,20 +6,7 @@ if [[ $(uname) != "Darwin" ]] ; then
     HOMEDIR="home"
 fi
 
-typeset -A DOTFILES=(
-    # [dotfiles repo loc]=loc on system
-    [$(pwd)/.gitconfig]=/$HOMEDIR/$(whoami)/.gitconfig
-    [$(pwd)/.npmrc]=/$HOMEDIR/$(whoami)/.npmrc
-    [$(pwd)/.prettierrc]=/$HOMEDIR/$(whoami)/.prettierrc
-    [$(pwd)/.prettierignore]=/$HOMEDIR/$(whoami)/.prettierignore
-    [$(pwd)/.zshrc]=/$HOMEDIR/$(whoami)/.zshrc
-    [$(pwd)/.zprofile]=/$HOMEDIR/$(whoami)/.zprofile
-    [$(pwd)/.zshenv]=/$HOMEDIR/$(whoami)/.zshenv
-    [$(pwd)/.profile]=/$HOMEDIR/$(whoami)/.profile
-    [$(pwd)/nvim]=/$HOMEDIR/$(whoami)/.config/nvim
-    [$(pwd)/.bunfig.toml]=/$HOMEDIR/$(whoami)/.bunfig.toml
-    [$(pwd)/alacritty]=/$HOMEDIR/$(whoami)/.config/alacritty
-)
+source dotfiles.sh
 
 # create symbolic links for config files
 echo "~~~ LINKING FILES... ~~~"
