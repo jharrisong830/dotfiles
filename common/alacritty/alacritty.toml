@@ -1,0 +1,18 @@
+[general]
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+
+[window]
+dimensions = { columns = 80, lines = 24 }
+opacity = 0.85
+blur = true
+padding = { x = 4, y = 4 }
+dynamic_padding = true
+
+[font]
+normal = { family = "MonaspiceKr Nerd Font Mono", style = "Regular" }
+size = 16.0
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+
+
