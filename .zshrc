@@ -11,11 +11,7 @@ setopt prompt_subst
 
 PROMPT='%F{red}%n%f @ %F{green}%m%f: %F{blue}%1~%f ${vcs_info_msg_0_}%# '
 
-# opam configuration
-[[ ! -r /Users/johngraham/.opam/opam-init/init.zsh ]] || source /Users/johngraham/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-
-if command -v brew &> /dev/null # check if brew exists before setting path
-then
+if command -v brew &> /dev/null ; then # check if brew exists before setting path
     # python config for homebrew
     export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
 
@@ -33,19 +29,16 @@ then
 fi
 
 
-if command -v lsd &> /dev/null # check if lsd exists before setting alias
-then
+if command -v lsd &> /dev/null ; then # check if lsd exists before setting alias
     alias ls="lsd --icon-theme fancy"
 fi
 
 
-if command -v caffeinate &> /dev/null # check if caffeinate exists before setting alias
-then
+if command -v caffeinate &> /dev/null ; then # check if caffeinate exists before setting alias
     alias caff="caffeinate -d" # program hangs and prevents the display from sleeping
 fi
 
-if command -v git &> /dev/null 
-then
+if command -v git &> /dev/null ; then
     alias gs="git status"
     alias gl="git log"
     alias gc="git commit"
@@ -57,9 +50,11 @@ then
     alias gp="git push"
     alias gsw="git switch"
     alias gch="git checkout"
+    alias gr="git restore"
 fi
 
 # setting common aliases
 alias ll="ls -lh"
 alias la="ls -a"
 alias lla="ls -lha"
+alias lal="ls -lha"
