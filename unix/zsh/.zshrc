@@ -32,6 +32,10 @@ if command -v caffeinate &> /dev/null ; then # check if caffeinate exists before
     alias caff="caffeinate -d" # program hangs and prevents the display from sleeping
 fi
 
+if command -v bat &> /dev/null ; then
+    alias cat="bat -pP"
+fi
+
 if command -v git &> /dev/null ; then
     alias gs="git status"
     alias gl="git log"
@@ -52,3 +56,9 @@ alias ll="ls -lh"
 alias la="ls -a"
 alias lla="ls -lha"
 alias lal="ls -lha"
+
+# zsh plugins (assuming home directory, and plugins are located in .zsh/)
+if [[ -d .zsh/zsh-syntax-highlighting ]] ; then
+    source .zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+

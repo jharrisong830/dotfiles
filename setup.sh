@@ -49,11 +49,34 @@ for original_file in $(pwd)/common/js/* ; do
 done
 
 for original_file in $(pwd)/unix/zsh/* ; do
-    filename=$(basename $original_file)
-    target=/$HOMEDIR/$(whoami)/$filename
+    if [[ $(basename original_file) == "plugins" ]] ; then # do not link plugins dir
+        filename=$(basename $original_file)
+        target=/$HOMEDIR/$(whoami)/$filename
 
-    _link_dotfiles $filename $original_file $target
+        _link_dotfiles $filename $original_file $target
+    fi
 done
+
+
+
+
+# zsh plugins
+
+if [[ ! -d /$HOMEDIR/$(whoami)/.zsh ]] ; then
+    echo "Creating ~/.zsh directory"
+    mkdir /$HOMEDIR/$(whoami)/.zsh
+fi
+
+git submodule update # gets most recent version of submodule repos
+
+for original_plugin in $(pwd)/unix/zsh/plugins/*/ ; do
+    pluginname=$(basename $original_plugin)
+    target=/$HOMEDIR/$(whoami)/.zsh/$pluginname
+
+    _link_dotfiles $pluginname $original_plugin $target
+done
+
+
 
 
 if [[ ! -d /$HOMEDIR/$(whoami)/.config ]] ; then
