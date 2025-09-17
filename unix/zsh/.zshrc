@@ -12,12 +12,6 @@ setopt prompt_subst
 PROMPT='%F{red}%n%f @ %F{green}%m%f: %F{blue}%1~%f ${vcs_info_msg_0_}%# '
 
 if command -v brew &> /dev/null ; then # check if brew exists before setting path
-    # python config for homebrew
-    export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
-
-    # use homebrew git instead of macOS git
-    export PATH="$(brew --prefix)/opt/git/bin:$PATH"
-
     # alias for 'brew services <start | stop> <service>'
     alias mongo-start="brew services start mongodb-community"
     alias mongo-stop="brew services stop mongodb-community"
