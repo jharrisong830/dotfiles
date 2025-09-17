@@ -33,7 +33,7 @@ if command -v caffeinate &> /dev/null ; then # check if caffeinate exists before
 fi
 
 if command -v bat &> /dev/null ; then
-    alias cat="bat -pP"
+    alias cat="bat --theme ansi -pP"
 fi
 
 if command -v git &> /dev/null ; then
