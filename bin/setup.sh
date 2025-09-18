@@ -39,6 +39,7 @@ if [[ ! -d /$HOMEDIR/$(whoami)/.zsh ]] ; then
     mkdir /$HOMEDIR/$(whoami)/.zsh
 fi
 
+git submodule init
 git submodule update # gets most recent version of submodule repos
 
 for original_plugin in $REPO_ROOT/unix/zsh/plugins/*/ ; do
