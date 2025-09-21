@@ -21,8 +21,8 @@ if (Test-Path -Path "C:\Users\$env:USERNAME\Apps\Notepad++") { # add notepad++ t
     $env:PATH += ";C:\Users\$env:USERNAME\Apps\Notepad++"
 }
 
-if (Test-Path -Path "C:\Users\johng\scoop\apps\openjdk\current\bin") { # add openjdk to front of path (incase java8 occurs first)
-    $env:PATH = "C:\Users\johng\scoop\apps\openjdk\current\bin;" + $env:PATH
+if (Test-Path -Path "C:\Users\$env:USERNAME\scoop\apps\openjdk\current\bin") { # add openjdk to front of path (incase java8 occurs first)
+    $env:PATH = "C:\Users\$env:USERNAME\scoop\apps\openjdk\current\bin;" + $env:PATH
 }
 
 function _rm-rf { Remove-Item -Recurse -Force -Path @args }
