@@ -65,12 +65,5 @@ foreach ($original_file in Get-Item -Path "$(Get-Location)\common\nvim") {
     _link_dotfiles -filename $filename -original_file $original_file -target $target
 }
 
-foreach ($original_file in Get-Item -Path "$(Get-Location)\common\alacritty") {
-    $filename = Split-Path -Path $original_file -Leaf
-    $target = "$env:LOCALAPPDATA\$filename"
-
-    _link_dotfiles -filename $filename -original_file $original_file -target $target
-}
-
 
 echo "Done!"
