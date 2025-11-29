@@ -68,13 +68,15 @@
                 "font": 
                 {
                     "face": "MonaspiceKr Nerd Font",
-                    "size": 13
+                    "size": 12
                 },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "icon": "ms-appx:///ProfileIcons/pwsh.png",
                 "name": "PowerShell",
-                "source": "Windows.Terminal.PowershellCore"
+                "opacity": 85,
+                "source": "Windows.Terminal.PowershellCore",
+                "useAcrylic": true
             },
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
