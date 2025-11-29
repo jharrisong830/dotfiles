@@ -10,9 +10,10 @@ dynamic_padding = true
 
 [font]
 normal = { family = "MonaspiceKr Nerd Font Mono", style = "Regular" }
-size = 16.0
+size = 12.0
 
 [cursor]
 style = { shape = "Beam", blinking = "On" }
 
-
+[terminal]
+shell = { program = "pwsh" }
