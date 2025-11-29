@@ -46,6 +46,7 @@ if command -v git &> /dev/null ; then
     alias ga="git add"
     alias gb="git branch"
     alias gp="git push"
+    alias gpl="git pull"
     alias gsw="git switch"
     alias gch="git checkout"
     alias gr="git restore"
