@@ -15,5 +15,3 @@ size = 12.0
 [cursor]
 style = { shape = "Beam", blinking = "On" }
 
-[terminal]
-shell = { program = "pwsh" }
