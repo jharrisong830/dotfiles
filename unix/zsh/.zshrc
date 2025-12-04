@@ -39,6 +39,8 @@ fi
 if command -v git &> /dev/null ; then
     alias gs="git status"
     alias gl="git log"
+    alias gln="git log -n"
+    alias gd="git diff"
     alias gc="git commit"
     alias gcm="git commit -m"
     alias gca="git commit -a"
@@ -50,6 +52,9 @@ if command -v git &> /dev/null ; then
     alias gsw="git switch"
     alias gch="git checkout"
     alias gr="git restore"
+    alias grm="git rm"
+
+    alias reporoot="git rev-parse --show-toplevel"
 fi
 
 # setting common aliases

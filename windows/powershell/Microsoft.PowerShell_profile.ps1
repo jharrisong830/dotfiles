@@ -35,6 +35,12 @@ if (Get-Command "git" -ErrorAction Ignore) {
     function _gl { git log @args } 
     Set-Alias -Force -Name gl -Value _gl
 
+    function _gln { git log -n @args }
+    Set-Alias -Force -Name gln -Value _gln
+
+    function _gd { git diff @args }
+    Set-Alias -Force -Name gd -Value _gd
+
     function _gc { git commit @args } 
     Set-Alias -Force -Name gc -Value _gc
 
@@ -67,7 +73,15 @@ if (Get-Command "git" -ErrorAction Ignore) {
 
     function _gr { git restore @args } 
     Set-Alias -Force -Name gr -Value _gr
+
+    function _grm { git rm @args }
+    Set-Alias -Force -Name grm -Value _grm
+
+
+    function _reporoot { git rev-parse --show-toplevel }
+    Set-Alias -Force -Name reporoot -Value _reporoot
 }
+
 # setting common aliases
 function _ll { Get-ChildItem @args } 
 Set-Alias -Force -Name ll -Value _ll
