@@ -16,3 +16,8 @@ if [[ -d /opt/homebrew ]] ; then
     # add brew git to front of path
     export PATH="$HOMEBREW_PREFIX/opt/git/bin:$PATH";
 fi
+
+if [[ -d $HOME/.local/share/swiftly ]]; then
+    . "/home/johng/.local/share/swiftly/env.sh"
+fi
+
