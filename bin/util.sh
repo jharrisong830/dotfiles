@@ -1,9 +1,3 @@
-HOMEDIR="Users"
-
-if [[ $(uname) != "Darwin" ]] ; then
-    HOMEDIR="home"
-fi
-
 REPO_ROOT=$(git rev-parse --show-toplevel)
 
 function _unlink_target() {
