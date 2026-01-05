@@ -95,3 +95,12 @@ Set-Alias -Force -Name lla -Value _lla
 function _lal { Get-ChildItem @args } 
 Set-Alias -Force -Name lal -Value _lal
 
+function _win-fresh {
+    if (Get-Command "winget" -ErrorAction Ignore) {
+        winget upgrade --all
+    }
+    if (Get-Command "scoop" -ErrorAction Ignore) {
+        scoop update * && scoop cleanup *
+    }
+}
+Set-Alias -Force -Name win-fresh -Value _win-fresh
