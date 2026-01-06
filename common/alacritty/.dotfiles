@@ -1,0 +1,10 @@
+[
+    {
+        "name": "alacritty.toml",
+        "location": "{HOME}/.config/alacritty/alacritty.toml"
+    },
+    {
+        "name": "catppuccin-mocha.toml",
+        "location": "{HOME}/.config/alacritty/colors/catppuccin-mocha.toml"
+    }
+]
