@@ -64,7 +64,6 @@ alias lla="ls -lha"
 alias lal="ls -lha"
 
 # zsh plugins (assuming home directory, and plugins are located in .zsh/)
-if [[ -d .zsh/zsh-syntax-highlighting ]] ; then
-    source .zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ -d .zsh/plugins/zsh-syntax-highlighting ]] ; then
+    source .zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
-
