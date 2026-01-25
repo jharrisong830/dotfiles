@@ -1,0 +1,10 @@
+---
+name: "alacritty"
+location: "{HOME}/.config/{FILENAME}"
+---
+name: "nvim"
+location: "{HOME}/.config/{FILENAME}"
+---
+name: "btop"
+location: "{HOME}/.config/{FILENAME}"
+---

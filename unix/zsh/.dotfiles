@@ -1,0 +1,10 @@
+---
+name: ".zshrc"
+location: "{HOME}/{FILENAME}"
+---
+name: ".zprofile"
+location: "{HOME}/{FILENAME}"
+---
+name: "plugins"
+location: "{HOME}/.zsh/{FILENAME}"
+---
