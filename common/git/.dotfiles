@@ -1,0 +1,4 @@
+---
+name: ".gitconfig"
+location: "{HOME}/{FILENAME}"
+---

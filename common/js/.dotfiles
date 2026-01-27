@@ -1,0 +1,13 @@
+---
+name: ".bunfig.toml"
+location: "{HOME}/{FILENAME}"
+---
+name: ".npmrc"
+location: "{HOME}/{FILENAME}"
+---
+name: ".prettierignore"
+location: "{HOME}/{FILENAME}"
+---
+name: ".prettierrc"
+location: "{HOME}/{FILENAME}"
+---

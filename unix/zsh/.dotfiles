@@ -1,0 +1,16 @@
+---
+name: ".zshrc"
+location: "{HOME}/{FILENAME}"
+win32:
+  shouldLink: false
+---
+name: ".zprofile"
+location: "{HOME}/{FILENAME}"
+win32:
+  shouldLink: false
+---
+name: "plugins"
+location: "{HOME}/.zsh/{FILENAME}"
+win32:
+  shouldLink: false
+---
