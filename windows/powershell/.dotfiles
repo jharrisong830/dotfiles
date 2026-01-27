@@ -1,0 +1,6 @@
+name: "Microsoft.PowerShell_profile.ps1"
+location: "{HOME}/Documents/PowerShell/{FILENAME}
+darwin:
+  shouldLink: false
+linux:
+  shouldLink: false
