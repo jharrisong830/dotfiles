@@ -1,5 +1,5 @@
 name: "settings.json"
-location: "{HOME}/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/{FILENAME}"
+location: "{HOME}/AppData/Local/Packages/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe/LocalState/{FILENAME}"
 darwin:
   shouldLink: false
 linux:
