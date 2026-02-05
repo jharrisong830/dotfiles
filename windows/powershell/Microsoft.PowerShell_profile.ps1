@@ -81,8 +81,13 @@ if (Get-Command "git" -ErrorAction Ignore) {
     function _reporoot { git rev-parse --show-toplevel }
     Set-Alias -Force -Name reporoot -Value _reporoot
 
-    function _clone { git clone "https://github.com/jharrisong830/$args.git"}
-    Set-Alias -Force -Name clone -Value _clone
+    if (Get-Command "gh" -ErrorAction Ignore) {
+        function _ghclone { gh repo clone $args }
+        Set-Alias -Force -Name clone -Value _ghclone
+    } else {
+        function _gitclone { git clone "https://github.com/jharrisong830/$args.git"}
+        Set-Alias -Force -Name clone -Value _gitclone
+    }
 }
 
 # setting common aliases

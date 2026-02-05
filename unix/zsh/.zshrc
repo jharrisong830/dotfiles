@@ -49,14 +49,18 @@ if command -v git &> /dev/null ; then
 
     alias reporoot="git rev-parse --show-toplevel"
 
-    _clone() {
-        if [ -z "$1" ] ; then
-            echo "Usage: clone <repository-name>"
-            return 1
-        fi
-        git clone "https://github.com/jharrisong830/$1.git"
-    }
-    alias clone=_clone
+    if command -v gh &> /dev/null ; then
+        alias clone="gh repo clone"
+    else
+        _clone() {
+            if [ -z "$1" ] ; then
+                echo "Usage: clone <repository-name>"
+                return 1
+            fi
+            git clone "https://github.com/jharrisong830/$1.git"
+        }
+        alias clone=_clone
+    fi
 fi
 
 # setting common aliases
