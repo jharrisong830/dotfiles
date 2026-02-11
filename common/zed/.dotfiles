@@ -1,0 +1,5 @@
+name: "settings.json"
+location: "{HOME}/.config/zed/{FILENAME}"
+win32:
+  shouldLink: true
+  location: "{HOME}/AppData/Roaming/Zed/{FILENAME}"
