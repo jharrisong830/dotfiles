@@ -40,6 +40,7 @@ if command -v git &> /dev/null ; then
     alias gcam="git commit -am"
     alias ga="git add"
     alias gb="git branch"
+    alias gba="git branch -a"
     alias gp="git push"
     alias gpl="git pull"
     alias gsw="git switch"

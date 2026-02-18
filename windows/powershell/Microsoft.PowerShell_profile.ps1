@@ -58,6 +58,9 @@ if (Get-Command "git" -ErrorAction Ignore) {
 
     function _gb { git branch @args } 
     Set-Alias -Force -Name gb -Value _gb
+    
+    function _gba { git branch -a @args }
+    Set-Alias -Force -Name gba -Value _gba
 
     function _gp { git push @args } 
     Set-Alias -Force -Name gp -Value _gp
