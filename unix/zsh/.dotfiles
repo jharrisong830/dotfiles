@@ -14,3 +14,8 @@ location: "{HOME}/.zsh/{FILENAME}"
 win32:
   shouldLink: false
 ---
+name: "bin"
+location: "{HOME}/.zsh/{FILENAME}"
+win32:
+  shouldLink: false
+---

@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+GITHUB_USERNAME="jharrisong830"
+
+if command -v git &> /dev/null ; then
+    if [ -z "$1" ] ; then
+        echo "Usage: clone <repository-name>"
+        exit 1
+    fi
+    
+    if command -v gh &> /dev/null ; then
+        gh repo clone $1
+    else
+        git clone "https://github.com/$GITHUB_USERNAME/$1.git"
+    fi
+else
+    echo "Error: git is not installed"
+    exit 1
+fi

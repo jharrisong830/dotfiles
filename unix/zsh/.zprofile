@@ -10,3 +10,7 @@ if [[ -d /opt/homebrew ]] ; then
     # add brew git to front of path
     export PATH="$HOMEBREW_PREFIX/opt/git/bin:$PATH";
 fi
+
+if [[ -d $HOME/.zsh/bin ]] ; then
+    export PATH="$HOME/.zsh/bin:$PATH"
+fi

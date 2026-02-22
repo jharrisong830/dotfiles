@@ -11,9 +11,6 @@ setopt prompt_subst
 
 PROMPT='%F{red}%n%f @ %F{green}%m%f: %F{blue}%1~%f ${vcs_info_msg_0_}%# '
 
-if command -v brew &> /dev/null ; then # check if brew exists before setting path
-    alias brew-fresh="brew update && brew upgrade && brew autoremove && brew cleanup"
-fi
 
 
 if command -v lsd &> /dev/null ; then # check if lsd exists before setting alias
@@ -25,9 +22,11 @@ if command -v caffeinate &> /dev/null ; then # check if caffeinate exists before
     alias caff="caffeinate -d" # program hangs and prevents the display from sleeping
 fi
 
+
 if command -v bat &> /dev/null ; then
     alias cat="bat --theme ansi -pP"
 fi
+
 
 if command -v git &> /dev/null ; then
     alias gs="git status"
@@ -49,20 +48,8 @@ if command -v git &> /dev/null ; then
     alias grm="git rm"
 
     alias reporoot="git rev-parse --show-toplevel"
-
-    if command -v gh &> /dev/null ; then
-        alias clone="gh repo clone"
-    else
-        _clone() {
-            if [ -z "$1" ] ; then
-                echo "Usage: clone <repository-name>"
-                return 1
-            fi
-            git clone "https://github.com/jharrisong830/$1.git"
-        }
-        alias clone=_clone
-    fi
 fi
+
 
 # setting common aliases
 alias ll="ls -lh"

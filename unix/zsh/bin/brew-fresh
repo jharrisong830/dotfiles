@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+
+if command -v brew &> /dev/null ; then
+    brew update && brew upgrade && brew autoremove && brew cleanup
+else
+    echo "Error: brew is not installed"
+    exit 1
+fi
