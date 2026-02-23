@@ -1,0 +1,6 @@
+name: "config.json"
+location: "{HOME}/.config/yay/{FILENAME}"
+win32:
+  shouldLink: false
+darwin:
+  shouldLink: false
