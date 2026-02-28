@@ -1,0 +1,10 @@
+---
+name: "settings.json"
+location: "{HOME}/.claude/{FILENAME}"
+---
+name: "statusline.sh"
+location: "{HOME}/.claude/{FILENAME}"
+---
+name: "CLAUDE.md"
+location: "{HOME}/.claude/{FILENAME}"
+---

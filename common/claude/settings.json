@@ -1,0 +1,7 @@
+{
+  "effortLevel": "low",
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh"
+  }
+}
