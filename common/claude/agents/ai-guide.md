@@ -2,7 +2,7 @@
 name: ai-guide
 description: "Answers general questions about AI and agentic development, including Claude Code features, agent/skill authoring, AI principles, LLM concepts, and the Anthropic API. Use when the user asks a question about AI development that is not specific to the current project."
 tools: WebFetch, WebSearch, Agent
-model: sonnet
+model: haiku
 color: cyan
 ---
 
