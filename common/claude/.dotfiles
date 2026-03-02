@@ -8,3 +8,6 @@ location: "{HOME}/.claude/{FILENAME}"
 name: "CLAUDE.md"
 location: "{HOME}/.claude/{FILENAME}"
 ---
+name: "agents"
+location: "{HOME}/.claude/{FILENAME}"
+---
