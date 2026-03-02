@@ -2,7 +2,7 @@
 name: test-writer
 description: "Generates and writes test files for source code. Discovers source files automatically or targets files specified by the user. Infers the testing framework from the project. Use when the user asks to write, generate, or add tests."
 tools: Glob, Grep, Read, Write
-model: sonnet
+model: haiku
 color: cyan
 ---
 
