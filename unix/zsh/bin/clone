@@ -1,9 +1,9 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 GITHUB_USERNAME="jharrisong830"
 
 if command -v git &> /dev/null ; then
-    if [ -z "$1" ] ; then
+    if [[ -z "$1" ]] ; then
         echo "Usage: clone <repository-name>"
         exit 1
     fi
