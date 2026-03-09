@@ -31,7 +31,7 @@
 - Do not push unless explicitly asked
 
 # Git — Autonomous / Agent Sessions
-- Create a new branch named `claude/<short-task-name>` before making changes
+- Your FIRST action must be to check the current branch. If it is not already a `claude/...` branch, create and switch to a new branch named `claude/<short-task-name>` before doing anything else — no file edits, no reads, nothing
 - Commit incrementally as logical units of work are completed
 - Commit messages should be concise but descriptive
 - Open a pull request when the task is complete for review and approval
