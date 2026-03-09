@@ -1,0 +1,19 @@
+font-family = "MonaspiceKr Nerd Font Mono"
+
+theme = "Catppuccin Mocha"
+
+cursor-style = "bar"
+cursor-style-blink = true
+
+background-opacity = 0.85
+background-blur = true
+
+copy-on-select = false
+
+right-click-action = "copy-or-paste"
+
+quit-after-last-window-closed = true
+
+window-padding-x = 4
+window-padding-y = 4
+
