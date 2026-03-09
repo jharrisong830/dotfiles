@@ -6,7 +6,7 @@ cursor-style = "bar"
 cursor-style-blink = true
 
 background-opacity = 0.85
-background-blur = true
+background-blur = "macos-glass-regular"
 
 copy-on-select = false
 
