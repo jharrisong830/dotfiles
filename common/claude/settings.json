@@ -4,5 +4,9 @@
     "type": "command",
     "command": "~/.claude/statusline.sh"
   },
-  "effortLevel": "low"
+  "effortLevel": "low",
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  }
 }
