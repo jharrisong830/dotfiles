@@ -1,5 +1,7 @@
+# macOS specific options for background blur and font size
+config-file = ?config.macos
+
 font-family = "MonaspiceKr Nerd Font Mono"
-font-size = 16
 
 theme = "Catppuccin Mocha"
 
@@ -7,7 +9,7 @@ cursor-style = "bar"
 cursor-style-blink = true
 
 background-opacity = 0.85
-background-blur = "macos-glass-regular"
+background-blur = true
 
 copy-on-select = false
 
@@ -19,4 +21,3 @@ window-padding-x = 4
 window-padding-y = 4
 window-height = 24
 window-width = 80
-

@@ -1,0 +1,11 @@
+---
+name: "config"
+location: "{HOME}/.config/ghostty/{FILENAME}"
+---
+name: "config.macos"
+location: "{HOME}/.config/ghostty/{FILENAME}"
+linux:
+  shouldLink: false
+win32:
+  shouldLink: false
+---

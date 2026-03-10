@@ -15,7 +15,3 @@ win32:
 name: "btop"
 location: "{HOME}/.config/{FILENAME}"
 ---
-name: "ghostty"
-location: "{HOME}/.config/{FILENAME}"
----
-
