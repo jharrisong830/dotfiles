@@ -11,3 +11,6 @@ location: "{HOME}/.claude/{FILENAME}"
 name: "agents"
 location: "{HOME}/.claude/{FILENAME}"
 ---
+name: "skills"
+location: "{HOME}/.claude/{FILENAME}"
+---
