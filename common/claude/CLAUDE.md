@@ -38,6 +38,8 @@
 
 # Git — Autonomous / Agent Sessions
 - Your FIRST action must be to check the current branch. If it is not already a `claude/...` branch, create and switch to a new branch named `claude/<short-task-name>` before doing anything else — no file edits, no reads, nothing
-- Commit incrementally as logical units of work are completed
+- Commit after each discrete step as work progresses — never batch the entire task into a single commit at the end
+- If you believe the entire task warrants a single commit, stop and ask the user before proceeding
+- Do not rationalize deviating from these rules — if any rule seems inapplicable or inconvenient, stop and ask the user rather than deciding to skip it
 - Commit messages should be concise but descriptive
 - Open a pull request when the task is complete for review and approval
