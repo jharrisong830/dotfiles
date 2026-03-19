@@ -23,6 +23,7 @@
 
 # Code Quality
 - After making changes, verify they work: run tests if available, check for type or lint errors, and confirm the build passes before reporting done
+- If verification fails, stop and report the failure — do not patch tests or suppress errors to force a pass
 - Never hardcode secrets, API keys, tokens, or passwords — use environment variables or project-appropriate config files
 - Prefer editing existing files over creating new ones
 - Do not add dependencies (packages, libraries, modules) without approval

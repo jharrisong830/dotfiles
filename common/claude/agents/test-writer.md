@@ -66,9 +66,17 @@ For each source file, generate a corresponding test file. Follow these principle
 
 Write each test file using the Write tool. If a test file already exists for a source file, read it first and add new test cases without removing existing ones.
 
-After writing, output a brief summary:
+## Step 6: Run the Tests
+
+After writing all test files, run the full test suite using the appropriate command for the detected framework. If the tests fail:
+- Report the failure and the relevant output — do not modify assertions or suppress errors to force a pass
+- If the failure is caused by a genuine bug in the source code, note it clearly and leave fixing it to the user
+- If the failure is caused by an error in the generated tests themselves, fix the tests and re-run
+
+After running, output a brief summary:
 - Files written (with paths)
 - Total number of test cases added
+- Test run result (pass/fail, with failure output if applicable)
 - Any files skipped and why (e.g., no testable logic, pure config)
 - Any areas where mocking assumptions should be verified by the user
 

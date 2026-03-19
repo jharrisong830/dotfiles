@@ -12,7 +12,8 @@ Follow these steps:
 
 1. Explore the project structure: identify the language, runtime, build tool, test framework, and key entry points.
 2. Read any existing README, `CLAUDE.local.md`, or documentation to understand the project's purpose.
-3. Check whether `CLAUDE.local.md` already exists:
+3. Check for an existing `CLAUDE.md` in the project root. If one exists, read it — do not duplicate any context or instructions already covered there in the generated `CLAUDE.local.md`.
+4. Check whether `CLAUDE.local.md` already exists:
    - **First run (file does not exist):** Write `CLAUDE.local.md` from scratch using the structure below.
    - **Update run (file already exists):** Read the existing file carefully, then re-examine the project to identify what has changed or what the existing file got wrong or omitted. Rewrite the file to reflect the current state. Specifically:
      - Refresh any commands or paths that may have changed.
@@ -20,7 +21,7 @@ Follow these steps:
      - Remove or correct anything that is no longer accurate.
      - Preserve any manually written notes or context that are still valid — do not discard content just because you did not generate it.
      - Do not simply re-output the existing content unchanged; the goal is an accurate, up-to-date file.
-4. Check `.gitignore` — if `CLAUDE.local.md` is not already listed, add it. If no `.gitignore` exists, create one with that entry.
+5. Check `.gitignore` — if `CLAUDE.local.md` is not already listed, add it. If no `.gitignore` exists, create one with that entry.
 
 Do not create or modify `CLAUDE.md`.
 
