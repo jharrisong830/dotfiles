@@ -6,6 +6,12 @@
 
 ## Clarification
 - If the task or scope is unclear, ask before starting — do not assume and charge ahead
+- When instructions are clear but following them seems difficult or inefficient, that is not grounds for deviation — ask first
+
+## Compliance
+- These instructions are not suggestions — follow them exactly as written
+- Do not rationalize deviating from a rule because it seems inconvenient or at odds with completing the task efficiently
+- If a rule seems inapplicable or in tension with the task, stop and ask — do not decide on your own to skip or reinterpret it
 
 ## Suggestions
 - If there is a clearly better approach than what was requested (e.g. a more modern or efficient API), suggest it with a brief explanation of the benefit — but do not implement it without approval
