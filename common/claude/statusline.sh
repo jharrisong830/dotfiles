@@ -2,14 +2,15 @@
 
 input=$(cat)
 
-IFS=$'\t' read -r MODEL PCT USED TOTAL < <(echo "$input" | jq -r '[
+IFS=$'\t' read -r MODEL PCT USED TOTAL COST_RAW < <(echo "$input" | jq -r '[
     .model.display_name,
     ((.context_window.used_percentage // 0) | floor | tostring),
     ((.context_window.current_usage.input_tokens // 0)
      + (.context_window.current_usage.output_tokens // 0)
      + (.context_window.current_usage.cache_creation_input_tokens // 0)
      + (.context_window.current_usage.cache_read_input_tokens // 0) | tostring),
-    (.context_window.context_window_size // 0 | tostring)
+    (.context_window.context_window_size // 0 | tostring),
+    (.cost.total_cost_usd // 0 | tostring)
 ] | join("\t")')
 PCT=${PCT:-0}
 
@@ -56,9 +57,16 @@ fmt_k() {
 USED_FMT=$(fmt_k "$USED")
 TOTAL_FMT=$(fmt_k "$TOTAL")
 
+COST=$(awk -v c="${COST_RAW:-0}" 'BEGIN {
+    if (c < 0.01) printf "$%.4f", c
+    else printf "$%.2f", c
+}')
+
 BRANCH_STR=""
 BRANCH_ICON=$(printf "\xef\x90\x98")
 [ -n "$GIT_BRANCH" ] && BRANCH_STR=" ${MAGENTA}${BRANCH_ICON} ${GIT_BRANCH}${RESET}"
 
+SEP="${DIM}│${RESET}"
+
 printf "${RED}${MODEL}${RESET} @ ${GREEN}${HOST}${RESET}: ${BLUE}${DIR}${RESET}${BRANCH_STR}\n"
-printf "${BAR_COLOR}${FILLED_BAR}${DIM}${EMPTY_BAR}${RESET} ${BAR_COLOR}${PCT}%%${RESET} ${DIM}${USED_FMT}/${TOTAL_FMT}${RESET}"
+printf "${BAR_COLOR}${FILLED_BAR}${DIM}${EMPTY_BAR}${RESET} ${BAR_COLOR}${PCT}%%${RESET} ${SEP} ${DIM}${USED_FMT}/${TOTAL_FMT}${RESET} ${SEP} ${DIM}${COST}${RESET}"
