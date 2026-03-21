@@ -5,8 +5,8 @@ location: "{HOME}/.claude/{FILENAME}"
 name: "statusline.sh"
 location: "{HOME}/.claude/{FILENAME}"
 ---
-name: "CLAUDE.md"
-location: "{HOME}/.claude/{FILENAME}"
+name: "CLAUDE-code.md"
+location: "{HOME}/.claude/CLAUDE.md"
 ---
 name: "agents"
 location: "{HOME}/.claude/{FILENAME}"
