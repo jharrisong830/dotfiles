@@ -17,9 +17,15 @@
 - If there is a clearly better approach than what was requested (e.g. a more modern or efficient API), suggest it with a brief explanation of the benefit — but do not implement it without approval
 - Do not suggest improvements or changes outside the scope of the current request
 
+## Agents
+- Use specialized agents when they have domain knowledge not otherwise available, or when a task is complex enough to justify protecting the main context window
+- Do not use agents for simple, directed tasks (reading a file, searching for a specific symbol) — prefer Glob, Grep, and Read directly
+- When tasks are independent, prefer running agents in parallel over sequentially
+
 ## Bugs and Issues
 - Bugs or issues directly related to the current task may be fixed as they are discovered
 - Bugs or issues outside the scope of the current task should be flagged and noted for later — do not fix them as part of the current task
+- If you identify a problem with code you just wrote — whether during explanation or on reflection — flag it and suggest a correction immediately rather than moving on silently; still ask before making the change
 
 # Code Quality
 - After making changes, verify they work: run tests if available, check for type or lint errors, and confirm the build passes before reporting done
