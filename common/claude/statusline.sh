@@ -21,6 +21,7 @@ DIR="${DIR##*/}"
 HOST=$(hostname -s)
 
 GIT_BRANCH=$(git branch --show-current 2>/dev/null)
+GIT_ROOT=$(git rev-parse --show-toplevel 2>/dev/null)
 
 RESET=$'\033[0m'
 DIM=$'\033[2m'
@@ -71,11 +72,12 @@ SEP="${DIM}│${RESET}"
 
 if [ -n "$SESSION_ID" ]; then
     mkdir -p "$HOME/.claude-usage"
-    echo "$input" | jq -c '{
+    echo "$input" | jq -c --arg project "${GIT_ROOT:-}" '{
         session_id: .session_id,
         updated_at: (now | todate),
         model: .model.id,
         cwd: .cwd,
+        project: (if $project != "" then $project else null end),
         cost_usd: (.cost.total_cost_usd // 0),
         duration_ms: (.cost.total_duration_ms // 0),
         lines_added: (.cost.total_lines_added // 0),
@@ -100,4 +102,5 @@ if [ -n "$SESSION_ID" ]; then
 fi
 
 printf "${RED}${MODEL}${RESET} @ ${GREEN}${HOST}${RESET}: ${BLUE}${DIR}${RESET}${BRANCH_STR}\n"
-printf "${BAR_COLOR}${FILLED_BAR}${DIM}${EMPTY_BAR}${RESET} ${BAR_COLOR}${PCT}%%${RESET} ${SEP} ${DIM}${USED_FMT}/${TOTAL_FMT}${RESET} ${SEP} ${DIM}${COST}${RESET}"
+printf "${BAR_COLOR}${FILLED_BAR}${DIM}${EMPTY_BAR}${RESET} ${BAR_COLOR}${PCT}%%${RESET} ${SEP} ${DIM}${USED_FMT}/${TOTAL_FMT}${RESET} ${SEP} ${DIM}${COST}${RESET}\n"
+printf "${DIM}${SESSION_ID}${RESET}"
