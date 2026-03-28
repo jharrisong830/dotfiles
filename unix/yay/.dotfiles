@@ -1,5 +1,5 @@
 name: "config.json"
-location: "{HOME}/.config/yay/{FILENAME}"
+location: "{HOME}/.config/yay/{NAME}"
 win32:
   shouldLink: false
 darwin:

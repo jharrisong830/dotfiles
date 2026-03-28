@@ -1,17 +1,17 @@
 # ---
 # name: "alacritty"
-# location: "{HOME}/.config/{FILENAME}"
+# location: "{HOME}/.config/{NAME}"
 # darwin:
 #   shouldLink: false
 # win32:
 #   shouldLink: false
 ---
 name: "nvim"
-location: "{HOME}/.config/{FILENAME}"
+location: "{HOME}/.config/{NAME}"
 win32:
   shouldLink: true
-  location: "{HOME}/AppData/Local/{FILENAME}"
+  location: "{HOME}/AppData/Local/{NAME}"
 ---
 name: "btop"
-location: "{HOME}/.config/{FILENAME}"
+location: "{HOME}/.config/{NAME}"
 ---

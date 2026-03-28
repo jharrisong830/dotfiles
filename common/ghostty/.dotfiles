@@ -1,9 +1,9 @@
 ---
 name: "config"
-location: "{HOME}/.config/ghostty/{FILENAME}"
+location: "{HOME}/.config/ghostty/{NAME}"
 ---
 name: "config.macos"
-location: "{HOME}/.config/ghostty/{FILENAME}"
+location: "{HOME}/.config/ghostty/{NAME}"
 linux:
   shouldLink: false
 win32:
