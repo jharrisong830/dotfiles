@@ -1,0 +1,5 @@
+name: "config.yaml"
+location: "{HOME}/.config/spring-dotfile-manager/{NAME}"
+win32:
+  shouldLink: true
+  location: "{HOME}/AppData/Local/spring-dotfile-manager/{NAME}"

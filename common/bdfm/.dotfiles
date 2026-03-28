@@ -1,5 +1,5 @@
-name: "config.yaml"
-location: "{HOME}/.config/bun-dotfile-manager/{NAME}"
-win32:
-  shouldLink: true
-  location: "{HOME}/AppData/Local/bun-dotfile-manager/{NAME}"
+# name: "config.yaml"
+# location: "{HOME}/.config/bun-dotfile-manager/{NAME}"
+# win32:
+#   shouldLink: true
+#   location: "{HOME}/AppData/Local/bun-dotfile-manager/{NAME}"
