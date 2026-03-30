@@ -1,16 +1,16 @@
-# ---
-# name: "settings.json"
-# location: "{HOME}/.claude/{NAME}"
-# ---
-# name: "statusline.sh"
-# location: "{HOME}/.claude/{NAME}"
-# ---
-# name: "CLAUDE-code.md"
-# location: "{HOME}/.claude/CLAUDE.md"
-# ---
-# name: "agents"
-# location: "{HOME}/.claude/{NAME}"
-# ---
-# name: "skills"
-# location: "{HOME}/.claude/{NAME}"
-# ---
+---
+name: "settings.json"
+location: "{HOME}/.claude/{NAME}"
+---
+name: "statusline.sh"
+location: "{HOME}/.claude/{NAME}"
+---
+name: "CLAUDE-code.md"
+location: "{HOME}/.claude/CLAUDE.md"
+---
+name: "agents"
+location: "{HOME}/.claude/{NAME}"
+---
+name: "skills"
+location: "{HOME}/.claude/{NAME}"
+---
