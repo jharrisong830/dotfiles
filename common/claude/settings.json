@@ -8,5 +8,5 @@
     "type": "command",
     "command": "~/.claude/statusline.sh"
   },
-  "effortLevel": "high"
+  "effortLevel": "low"
 }
