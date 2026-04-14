@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# given a substring, find a single matching directory in the current directory
+# otherwise, an error is thrown 
+
+if [[ -z "$1" ]] ; then
+    echo "Usage: fcd <substring>"
+    exit 1
+fi
+
+SUBSTRING=$1
+
+RESULT=$(find . -maxdepth 1 -type d -name "*$SUBSTRING*")
+COUNT=$(echo "$RESULT" | wc -l)
+
+if [[ $COUNT -eq 0 || -z "$RESULT" ]] ; then
+    echo "No directories found containing '$SUBSTRING'"
+    exit 1
+elif [[ $COUNT -eq 1 ]] ; then
+    echo "$RESULT"
+    exit 0
+else
+    echo "Multiple directories found containing '$SUBSTRING':"
+    echo "$RESULT"
+    echo "Please specify a more specific substring."
+    exit 1
+fi

@@ -57,6 +57,20 @@ alias la="ls -a"
 alias lla="ls -lha"
 alias lal="ls -lha"
 
+if command -v _fcd &> /dev/null ; then
+    fcd() {
+        # calls _fcd and captures its output
+        # if call is successful, cd to the resulting directory
+        
+        local result
+        result="$(_fcd "$1")" || {
+            echo "Error: $result"
+            return 1
+        }
+        cd "$result" || return 1
+    }
+fi
+
 # zsh plugins (assuming plugins are located in ~/.zsh/plugins/)
 if [[ -d $HOME/.zsh/plugins/zsh-syntax-highlighting ]] ; then
     source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
