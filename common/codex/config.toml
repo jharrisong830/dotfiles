@@ -1,0 +1,26 @@
+model = "gpt-5.4-mini"
+model_reasoning_effort = "medium"
+[projects."/Users/johngraham/Developer/plancord"]
+trust_level = "trusted"
+
+[projects."/Users/johngraham/Developer/dotfiles"]
+trust_level = "trusted"
+
+[projects."/Users/johngraham/Developer/spring-dotfile-manager"]
+trust_level = "trusted"
+
+[projects."/Users/johngraham/Developer/plancord-org"]
+trust_level = "trusted"
+
+[tui]
+status_line = ["model-with-reasoning", "current-dir", "context-used", "used-tokens", "session-id", "fast-mode"]
+pet = "disabled"
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
+
+[notice]
+fast_default_opt_out = true
+
+[features]
+terminal_resize_reflow = true

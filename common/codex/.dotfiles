@@ -1,0 +1,10 @@
+---
+name: "AGENTS.md"
+location: "{HOME}/.codex/{NAME}"
+---
+name: "config.toml"
+location: "{HOME}/.codex/{NAME}"
+---
+name: "agents"
+location: "{HOME}/.codex/{NAME}"
+---
