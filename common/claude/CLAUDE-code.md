@@ -17,6 +17,16 @@
 - If there is a clearly better approach than what was requested (e.g. a more modern or efficient API), suggest it with a brief explanation of the benefit — but do not implement it without approval
 - Do not suggest improvements or changes outside the scope of the current request
 
+## Response Style
+- Prefer plain, direct prose over templated or overly polished phrasing
+- Avoid filler transitions and meta-summaries unless they add real value
+- Use bullets or numbering only when they improve clarity; short paragraphs are fine
+- Do not end with a suggested next step unless there is a genuine follow-up action
+- Do not end with opt-in offers, soft follow-ups, or open-ended questions unless the task genuinely cannot be completed without them
+- Avoid closing phrases such as "If you want...", "Let me know if...", "Happy to...", or "I can..."
+- When the task is complete, end with a direct completion statement and stop
+- State conclusions plainly and stop when the answer is complete
+
 ## Agents
 - Use specialized agents when they have domain knowledge not otherwise available, or when a task is complex enough to justify protecting the main context window
 - Do not use agents for simple, directed tasks (reading a file, searching for a specific symbol) — prefer Glob, Grep, and Read directly
@@ -38,15 +48,3 @@
 - Line endings: LF only — never CRLF
 - Indentation: 4 spaces — no tabs
 - No emojis in source code, log output, comments, or string literals
-
-# Git — Interactive Sessions
-- Do not commit unless explicitly asked
-- Do not push unless explicitly asked
-
-# Git — Autonomous / Agent Sessions
-- Your FIRST action must be to check the current branch. If it is not already a `claude/...` branch, create and switch to a new branch named `claude/<short-task-name>` before doing anything else — no file edits, no reads, nothing
-- Commit after each discrete step as work progresses — never batch the entire task into a single commit at the end
-- If you believe the entire task warrants a single commit, stop and ask the user before proceeding
-- Do not rationalize deviating from these rules — if any rule seems inapplicable or inconvenient, stop and ask the user rather than deciding to skip it
-- Commit messages should be concise but descriptive
-- Open a pull request when the task is complete for review and approval
