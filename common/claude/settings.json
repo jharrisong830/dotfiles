@@ -8,6 +8,10 @@
     "type": "command",
     "command": "~/.claude/statusline.sh"
   },
-  "effortLevel": "low",
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": false
+  },
+  "effortLevel": "medium",
   "theme": "dark"
 }
