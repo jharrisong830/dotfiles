@@ -38,7 +38,8 @@
 - If you identify a problem with code you just wrote — whether during explanation or on reflection — flag it and suggest a correction immediately rather than moving on silently; still ask before making the change
 
 # Code Quality
-- After making changes, verify they work: run tests if available, check for type or lint errors, and confirm the build passes before reporting done
+- After making any code change, you must run the relevant test suite before reporting the task complete. If no test suite covers the touched code, state that explicitly rather than omitting the step.
+- Do not report a task as done without showing the test/lint/build output, or stating why a step could not be run.
 - If verification fails, stop and report the failure — do not patch tests or suppress errors to force a pass
 - Never hardcode secrets, API keys, tokens, or passwords — use environment variables or project-appropriate config files
 - Prefer editing existing files over creating new ones

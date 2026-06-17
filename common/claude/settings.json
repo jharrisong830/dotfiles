@@ -13,5 +13,6 @@
     "autoAllowBashIfSandboxed": false
   },
   "effortLevel": "medium",
-  "theme": "dark"
+  "theme": "dark",
+  "autoMemoryEnabled": false
 }

@@ -49,7 +49,9 @@ EMPTY_BAR=""
 
 fmt_k() {
     local n=$1
-    if [ "$n" -ge 1000 ]; then
+    if [ "$n" -ge 1000000 ]; then
+        printf "%dm" $((n / 1000000))
+    elif [ "$n" -ge 1000 ]; then
         printf "%dk" $((n / 1000))
     else
         printf "%d" "$n"
