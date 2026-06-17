@@ -1,0 +1,10 @@
+{
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "'MonaspiceKr Nerd Font Mono',Menlo, Monaco, 'Courier New', monospace",
+    "files.eol": "\n",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "telemetry.feedback.enabled": false
+}

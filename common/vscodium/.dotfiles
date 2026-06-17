@@ -1,0 +1,7 @@
+---
+name: "settings.json"
+location: "{HOME}/Library/Application Support/VSCodium/User/{NAME}"
+win32:
+  shouldLink: false
+linux:
+  shouldLink: false
