@@ -1,7 +1,11 @@
 ---
 name: "settings.json"
-location: "{HOME}/Library/Application Support/VSCodium/User/{NAME}"
-win32:
-  shouldLink: false
+location: "{HOME}/.vscode-oss/{NAME}" # no single correct path for multiple platforms
+darwin:
+  shouldLink: true
+  location: "{HOME}/Library/Application Support/VSCodium/User/{NAME}"
 linux:
+  shouldLink: true
+  location: "{HOME}/.config/VSCodium/User/{NAME}"
+win32:
   shouldLink: false
