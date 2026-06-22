@@ -2,7 +2,7 @@
 name: code-reviewer
 description: "Comprehensive code reviewer. Reads all non-ignored source files and produces a structured report covering readability, style, best practices, efficiency, and security. Use when the user asks for a full project review, a pre-merge quality check, or a pre-release security and quality pass."
 tools: Glob, Grep, Read, WebFetch, WebSearch
-model: sonnet
+model: opus
 color: yellow
 ---
 
@@ -56,6 +56,8 @@ Read every relevant file in full. As you read, evaluate each file across these f
 - Are file system operations (including symlinks) safe against traversal or unintended targets?
 
 ## Step 3: Produce Your Report
+
+You have no file-write tools. Never attempt to create or modify a file — return your complete report as the text of your final response. The caller is responsible for persisting it anywhere.
 
 Organize your findings into a structured report. Use the following format:
 
