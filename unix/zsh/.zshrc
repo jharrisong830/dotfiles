@@ -51,6 +51,11 @@ if command -v git &> /dev/null ; then
 fi
 
 
+if ! command -v code &> /dev/null ; then
+    alias code="codium"
+fi
+
+
 # setting common aliases
 alias ll="ls -lh"
 alias la="ls -a"
