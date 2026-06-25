@@ -1,1 +1,2 @@
-dotfile-repo-path: "{HOME}/Developer/dotfiles"
+dotfile-repo-path: '{HOME}/Developer/dotfiles'
+allow-post-install-scripts: true
