@@ -51,7 +51,7 @@ if command -v git &> /dev/null ; then
 fi
 
 
-if ! command -v code &> /dev/null ; then
+if command -v codium &> /dev/null && ! command -v code &> /dev/null ; then
     alias code="codium"
 fi
 
