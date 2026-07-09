@@ -8,4 +8,5 @@ linux:
   shouldLink: true
   location: "{HOME}/.config/VSCodium/User/{NAME}"
 win32:
-  shouldLink: false
+  shouldLink: true
+  location: "{HOME}/AppData/Roaming/VSCodium/User/{NAME}"
