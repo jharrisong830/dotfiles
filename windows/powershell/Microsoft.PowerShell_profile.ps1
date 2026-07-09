@@ -28,6 +28,35 @@ if (Test-Path -Path "C:\Users\$env:USERNAME\scoop\apps\openjdk\current\bin") { #
 function _rm-rf { Remove-Item -Recurse -Force -Path @args }
 Set-Alias -Name rm-rf -Value _rm-rf
 
+if (Get-Command "lsd" -ErrorAction Ignore) {
+    function _lsd { lsd @args }
+    Set-Alias -Force -Name ls -Value _lsd
+    
+    # setting common aliases
+    function _lsd_l { lsd -lh @args }
+    Set-Alias -Force -Name ll -Value _lsd_l
+
+    function _lsd_a { lsd -a @args }
+    Set-Alias -Force -Name la -Value _lsd_a
+
+    function _lsd_la { lsd -lha @args }
+    Set-Alias -Force -Name lla -Value _lsd_la
+    Set-Alias -Force -Name lal -Value _lsd_la
+} else {
+    function _ls_common { Get-ChildItem @args }
+
+    # setting common aliases 
+    Set-Alias -Force -Name ll -Value _ls_common
+    Set-Alias -Force -Name la -Value _ls_common
+    Set-Alias -Force -Name lla -Value _ls_common
+    Set-Alias -Force -Name lal -Value _ls_common
+}
+
+if (Get-Command "bat" -ErrorAction Ignore) {
+    function _cat { bat --theme ansi -pP @args }
+    Set-Alias -Force -Name cat -Value _cat
+}
+
 if (Get-Command "git" -ErrorAction Ignore) {
     function _gs { git status @args } 
     Set-Alias -Force -Name gs -Value _gs
@@ -93,18 +122,11 @@ if (Get-Command "git" -ErrorAction Ignore) {
     }
 }
 
-# setting common aliases
-function _ll { Get-ChildItem @args } 
-Set-Alias -Force -Name ll -Value _ll
+if (Get-Command "codium" -ErrorAction Ignore && ! (Get-Command "code" -ErrorAction Ignore)) {
+    function _code { codium @args }
+    Set-Alias -Force -Name code -Value _code
+}
 
-function _la { Get-ChildItem @args } 
-Set-Alias -Force -Name la -Value _la
-
-function _lla { Get-ChildItem @args } 
-Set-Alias -Force -Name lla -Value _lla
-
-function _lal { Get-ChildItem @args } 
-Set-Alias -Force -Name lal -Value _lal
 
 function _win-fresh {
     if (Get-Command "winget" -ErrorAction Ignore) {
