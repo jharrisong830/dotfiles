@@ -8,3 +8,6 @@ location: "{HOME}/.codex/{NAME}"
 name: "agents"
 location: "{HOME}/.codex/{NAME}"
 ---
+name: "skills"
+location: "{HOME}/.codex/{NAME}"
+---
