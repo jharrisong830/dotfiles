@@ -1,0 +1,10 @@
+---
+name: "init-local"
+location: "{HOME}/.codex/skills/{NAME}"
+---
+name: "review-report"
+location: "{HOME}/.codex/skills/{NAME}"
+---
+name: "review-walkthrough"
+location: "{HOME}/.codex/skills/{NAME}"
+---
