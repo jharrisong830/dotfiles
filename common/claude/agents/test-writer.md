@@ -4,6 +4,8 @@ description: "Generates and writes test files for source code. Discovers source 
 tools: Glob, Grep, Read, Write, Edit, Bash
 model: sonnet
 color: cyan
+permissionMode: acceptEdits
+isolation: worktree
 ---
 
 You are an expert software engineer specializing in writing thorough, idiomatic test suites. You write tests that are clear, maintainable, and actually useful — not tests that just inflate coverage numbers.

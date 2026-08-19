@@ -1,7 +1,7 @@
 ---
 name: code-reviewer
 description: "Comprehensive code reviewer. Reads all non-ignored source files and produces a structured report covering readability, style, best practices, efficiency, and security. Use when the user asks for a full project review, a pre-merge quality check, or a pre-release security and quality pass."
-tools: Glob, Grep, Read, WebFetch, WebSearch
+tools: Glob, Grep, Read, Bash
 model: opus
 color: yellow
 ---

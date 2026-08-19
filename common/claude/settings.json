@@ -13,6 +13,15 @@
     "autoAllowBashIfSandboxed": false
   },
   "effortLevel": "medium",
+  "autoMemoryEnabled": false,
   "theme": "dark",
-  "autoMemoryEnabled": false
+  "permissions": {
+    "allow": [
+      "Bash(mvn test)",
+      "Bash(mvn * test)",
+      "Bash(mvn test *)",
+      "Bash(mvn * test *)"
+    ],
+    "defaultMode": "manual"
+  }
 }
