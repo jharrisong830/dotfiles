@@ -4,24 +4,31 @@
     "commit": "",
     "pr": ""
   },
+  "permissions": {
+    "allow": [
+      "Bash(./mvnw test)",
+      "Bash(./mvnw * test)",
+      "Bash(./mvnw test *)",
+      "Bash(./mvnw * test *)"
+    ],
+    "defaultMode": "default"
+  },
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh"
   },
   "sandbox": {
     "enabled": true,
-    "autoAllowBashIfSandboxed": false
+    "autoAllowBashIfSandboxed": false,
+    "excludedCommands": [
+      "Bash(./mvnw test)",
+      "Bash(./mvnw * test)",
+      "Bash(./mvnw test *)",
+      "Bash(./mvnw * test *)"
+    ]
   },
   "effortLevel": "medium",
   "autoMemoryEnabled": false,
   "theme": "dark",
-  "permissions": {
-    "allow": [
-      "Bash(mvn test)",
-      "Bash(mvn * test)",
-      "Bash(mvn test *)",
-      "Bash(mvn * test *)"
-    ],
-    "defaultMode": "manual"
-  }
+  "tui": "fullscreen"
 }
