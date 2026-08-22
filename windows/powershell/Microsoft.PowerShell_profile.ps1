@@ -25,6 +25,10 @@ if (Test-Path -Path "C:\Users\$env:USERNAME\scoop\apps\openjdk\current\bin") { #
     $env:PATH = "C:\Users\$env:USERNAME\scoop\apps\openjdk\current\bin;" + $env:PATH
 }
 
+if (Test-Path -Path "C:\Users\$env:USERNAME\AppData\Local\spring-dotfile-manager\bin") { # add sdfm to path
+    $env:PATH = "C:\Users\$env:USERNAME\AppData\Local\spring-dotfile-manager\bin;" + $env:PATH
+}
+
 function _rm-rf { Remove-Item -Recurse -Force -Path @args }
 Set-Alias -Name rm-rf -Value _rm-rf
 
